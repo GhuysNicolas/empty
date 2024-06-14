@@ -1,0 +1,67 @@
+Error at _cmdno 34 executing "solve" command
+(file ESTD_main.run, line 29, offset 1284):
+error processing param layers_in_out:
+	58 invalid subscripts discarded:
+	layers_in_out['PYROLYSIS_TO_LFO','ELECTRICITY']
+	layers_in_out['PYROLYSIS_TO_LFO','GASOLINE']
+	layers_in_out['PYROLYSIS_TO_LFO','DIESEL']
+	and 55 more.
+
+Presolve eliminates 653105 constraints and 418872 variables.
+"option presolve 10;" used, but "option presolve 11;" might work better.
+Adjusted problem:
+276339 variables, all linear
+501217 constraints, all linear; 1620704 nonzeros
+	354431 equality constraints
+	146786 inequality constraints
+1 linear objective; 1 nonzero.
+
+presolve results:
+	variables omitted:	418872
+	constraints omitted:	653105
+	ranges relaxed:		180464
+	bounds improved:	419816
+	constraint_drop_tol breakpoints: 0, 0, 0.7230248602209031
+	nba cycles:		9
+	bound row scans:	1853400
+	row-scan updates:	870783
+Gurobi 11.0.1:   pre:dual = -1
+  alg:method = 2
+  bar:crossover = 0
+  pre:passes = 3
+  bar:convtol = 1e-06
+  pre:solve = -1
+Gurobi 11.0.1: optimal solution; objective 51914.77747
+0 simplex iterations
+82 barrier iterations
+ 
+------------ WARNINGS ------------
+WARNING:  "Tolerance violations"
+  Type                         MaxAbs [Name]   MaxRel [Name]
+* expr '_linrange'             4E-04           -             
+*: Using the solver's aux variable values.
+Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
+solve_result = solved
+
+solve_result_num = 0
+
+_solve_elapsed_time = 22.516
+
+TotalCost 51.91477746918491
+GWP_tot 19.837121174945366
+GWP_op 14.161102903241703
+GWP_cstr 5.676018271703661
+LCA_tot 15.999999999454571
+LCA_cstr 16.091566682628894
+LCA_op 26.39608970208177
+LCA_res -26.487656385256102
+--------------SAVING COSTS -----------
+--------------SAVING RESOURCES -----------
+--------------SAVING GWP -----------
+--------------SAVING LCA ----------
+--------------SAVING Crit_1 ----------
+--------------SAVING Crit_2 ----------
+--------------SAVING Crit_3 ----------
+--------------SAVING Losses -----------
+--------------SAVING ASSETS -----------
+--------------SAVING SANKEY --------

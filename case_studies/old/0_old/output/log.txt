@@ -1,0 +1,69 @@
+Error at _cmdno 34 executing "solve" command
+(file ESTD_main.run, line 29, offset 1284):
+error processing param layers_in_out:
+	29 invalid subscripts discarded:
+	layers_in_out['WOOD_PRODUCTION','ELECTRICITY']
+	layers_in_out['WOOD_PRODUCTION','GASOLINE']
+	layers_in_out['WOOD_PRODUCTION','DIESEL']
+	and 26 more.
+
+Presolve eliminates 1112583 constraints and 662654 variables.
+"option presolve 10;" used, but "option presolve 11;" might work better.
+Adjusted problem:
+32263 variables, all linear
+41732 constraints, all linear; 179065 nonzeros
+	25383 equality constraints
+	16349 inequality constraints
+1 linear objective; 1 nonzero.
+
+Setting $presolve_fixeps >= 3.87e-06 could change presolve results.
+
+presolve results:
+	variables omitted:	662654
+	constraints omitted:	1112583
+	ranges relaxed:		27765
+	bounds improved:	650178
+	constraint_drop_tol breakpoints: 0, 0, 0.0009336507778847855
+	nba cycles:		9
+	bound row scans:	91663
+	row-scan updates:	63471
+Gurobi 11.0.1:   pre:dual = -1
+  alg:method = 2
+  bar:crossover = 0
+  pre:passes = 3
+  bar:convtol = 1e-06
+  pre:solve = -1
+Gurobi 11.0.1: optimal solution; objective 66370.57015
+0 simplex iterations
+64 barrier iterations
+ 
+------------ WARNINGS ------------
+WARNING:  "Tolerance violations"
+  Type                         MaxAbs [Name]   MaxRel [Name]
+* expr '_linrange'             3E-03           -             
+*: Using the solver's aux variable values.
+Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
+solve_result = solved
+
+solve_result_num = 0
+
+_solve_elapsed_time = 1.578
+
+TotalCost 66.3705701547217
+GWP_tot 101.24013529161512
+GWP_op 100.60721451287334
+GWP_cstr 0.6329207787417791
+LCA_tot 116.1478061336558
+LCA_cstr 11.624820839440622
+LCA_op 105.58213036698871
+LCA_res -1.0591450727735707
+--------------SAVING COSTS -----------
+--------------SAVING RESOURCES -----------
+--------------SAVING GWP -----------
+--------------SAVING LCA ----------
+--------------SAVING Crit_1 ----------
+--------------SAVING Crit_2 ----------
+--------------SAVING Crit_3 ----------
+--------------SAVING Losses -----------
+--------------SAVING ASSETS -----------
+--------------SAVING SANKEY --------
