@@ -1,52 +1,56 @@
 
-Presolve eliminates 653688 constraints and 420610 variables.
+Presolve eliminates 1112837 constraints and 662911 variables.
 "option presolve 10;" used, but "option presolve 11;" might work better.
 Adjusted problem:
-274601 variables, all linear
-500634 constraints, all linear; 1616942 nonzeros
-	353847 equality constraints
-	146787 inequality constraints
+32006 variables, all linear
+41478 constraints, all linear; 179447 nonzeros
+	25128 equality constraints
+	16350 inequality constraints
 1 linear objective; 1 nonzero.
 
+Setting $presolve_fixeps >= 3.87e-06 could change presolve results.
+
 presolve results:
-	variables omitted:	420610
-	constraints omitted:	653688
-	ranges relaxed:		180465
-	bounds improved:	419826
-	constraint_drop_tol breakpoints: 0, 0, 0.6601662315079011
+	variables omitted:	662911
+	constraints omitted:	1112837
+	ranges relaxed:		27188
+	bounds improved:	650438
+	constraint_drop_tol breakpoints: 0, 0, 0.0009336507778847855
 	nba cycles:		9
-	bound row scans:	1911504
-	row-scan updates:	926871
+	bound row scans:	91890
+	row-scan updates:	61692
 Gurobi 11.0.1:   pre:dual = -1
   alg:method = 2
   bar:crossover = 0
   pre:passes = 3
   bar:convtol = 1e-06
   pre:solve = -1
-Gurobi 11.0.1: optimal solution; objective 47193.58133
+Gurobi 11.0.1: optimal solution; objective 59857.46186
 0 simplex iterations
-94 barrier iterations
+56 barrier iterations
  
 ------------ WARNINGS ------------
 WARNING:  "Tolerance violations"
   Type                         MaxAbs [Name]   MaxRel [Name]
-* expr '_linrange'             1E-04           -             
+* variable bounds              1E-05           -             
+* expr '_linrange'             7E-04           -             
 *: Using the solver's aux variable values.
 Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 27.296
+_solve_elapsed_time = 1.547
 
-TotalCost 47.193581327151584
-GWP_tot 70.81389595232638
-GWP_op 65.72770927850186
-GWP_cstr 5.086186673824515
-LCA_tot 48.99999999959886
-LCA_cstr 18.84161900264993
-LCA_op 46.43047099645227
-LCA_res -16.272089999503347
+TotalCost 59.85746186384534
+GWP_tot 132.86819695659753
+GWP_op 132.2354562418157
+GWP_cstr 0.6327407147818263
+LCA_tot 136.59542225774632
+LCA_cstr 12.480414421138152
+LCA_op 106.99319821245841
+LCA_res 17.121809624149773
+Einv 104.6737722176828
 --------------SAVING COSTS -----------
 --------------SAVING RESOURCES -----------
 --------------SAVING GWP -----------

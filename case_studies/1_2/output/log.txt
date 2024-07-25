@@ -1,52 +1,56 @@
 
-Presolve eliminates 655147 constraints and 421780 variables.
+Presolve eliminates 1112836 constraints and 662911 variables.
 "option presolve 10;" used, but "option presolve 11;" might work better.
 Adjusted problem:
-273431 variables, all linear
-499175 constraints, all linear; 1607104 nonzeros
-	353544 equality constraints
-	145631 inequality constraints
+32006 variables, all linear
+41479 constraints, all linear; 179735 nonzeros
+	25128 equality constraints
+	16351 inequality constraints
 1 linear objective; 1 nonzero.
 
+Setting $presolve_fixeps >= 3.87e-06 could change presolve results.
+
 presolve results:
-	variables omitted:	421780
-	constraints omitted:	655147
-	ranges relaxed:		179293
-	bounds improved:	421289
-	constraint_drop_tol breakpoints: 0, 0, 0.6601662315733847
+	variables omitted:	662911
+	constraints omitted:	1112836
+	ranges relaxed:		27189
+	bounds improved:	650438
+	constraint_drop_tol breakpoints: 0, 0, 0.0009336507778847855
 	nba cycles:		9
-	bound row scans:	1905328
-	row-scan updates:	925615
+	bound row scans:	91952
+	row-scan updates:	62077
 Gurobi 11.0.1:   pre:dual = -1
   alg:method = 2
   bar:crossover = 0
   pre:passes = 3
   bar:convtol = 1e-06
   pre:solve = -1
-Gurobi 11.0.1: optimal solution; objective 67460.13091
+Gurobi 11.0.1: optimal solution; objective 59739.57
 0 simplex iterations
-111 barrier iterations
+66 barrier iterations
  
 ------------ WARNINGS ------------
 WARNING:  "Tolerance violations"
   Type                         MaxAbs [Name]   MaxRel [Name]
-* expr '_linrange'             1E-03           -             
+* variable bounds              1E-03           -             
+* expr '_linrange'             3E-03           -             
 *: Using the solver's aux variable values.
 Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 30.532
+_solve_elapsed_time = 1.172
 
-TotalCost 67.46013091488386
-GWP_tot 64.96182143445954
-GWP_op 58.8900115235307
-GWP_cstr 6.071809910928836
-LCA_tot 48.999999999616705
-LCA_cstr 18.467123167163486
-LCA_op 59.75613281267648
-LCA_res -29.223255980223254
+TotalCost 59.73956999981392
+GWP_tot 132.6299583026318
+GWP_op 131.9971406738415
+GWP_cstr 0.6328176287903061
+LCA_tot 136.92861028657902
+LCA_cstr 12.476411804431757
+LCA_op 107.37225381257608
+LCA_res 17.0799446695712
+Einv 104.4991602256289
 --------------SAVING COSTS -----------
 --------------SAVING RESOURCES -----------
 --------------SAVING GWP -----------

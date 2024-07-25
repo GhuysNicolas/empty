@@ -12,6 +12,7 @@ print "LCA_tot", TotalLCA/1000;
 print "LCA_cstr", (sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]))/1000;
 print "LCA_op", (sum {j in TECHNOLOGIES} LCA_op [j])/1000;
 print "LCA_res", (sum {i in RESOURCES} LCA_res [i])/1000;
+print "Einv", TotalCrit_1/1000;
 
 
 ## Print cost breakdown to txt file.
