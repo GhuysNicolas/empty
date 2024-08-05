@@ -704,8 +704,8 @@ subject to GWP_normalization :
 	TotalGWP_norm = ((TotalGWP - gwp_min) / (gwp_max - gwp_min))*100000;
 
 # New objectives #
-#subject to LCA_normalization :
-#	TotalLCA_norm = ((TotalLCA - lca_min) / (lca_max - lca_min))*100000;
+subject to LCA_normalization :
+	TotalLCA_norm = ((TotalLCA - lca_min) / (lca_max - lca_min))*100000;
 subject to Crit_1_normalization :
 	TotalCrit_1_norm = ((TotalCrit_1 - crit_1_min) / (crit_1_max - crit_1_min))*100000;
 subject to Crit_2_normalization :
@@ -719,8 +719,8 @@ subject to GWP_deviation_computation :
 	Positive_deviation_gwp = TotalGWP_norm - goal_gwp_norm;
 
 # New objectives #
-#subject to LCA_deviation_computation :
-#	Positive_deviation_lca = TotalLCA_norm - goal_lca_norm;
+subject to LCA_deviation_computation :
+	Positive_deviation_lca = TotalLCA_norm - goal_lca_norm;
 subject to Crit_1_deviation_computation :
 	Positive_deviation_crit_1 = TotalCrit_1_norm - goal_crit_1_norm;
 subject to Crit_2_deviation_computation :
@@ -730,7 +730,7 @@ subject to Crit_3_deviation_computation :
 
 
 subject to Multi_crit_computation :
-	Multi_crit_obj = Positive_deviation_cost * weight_cost + weight_gwp * Positive_deviation_gwp + weight_crit_1 * Positive_deviation_crit_1 + weight_crit_2 * Positive_deviation_crit_2 + weight_crit_3 * Positive_deviation_crit_3 ;#+ weight_lca * Positive_deviation_lca; # New objectives
+	Multi_crit_obj = Positive_deviation_cost * weight_cost + weight_gwp * Positive_deviation_gwp + weight_crit_1 * Positive_deviation_crit_1 + weight_crit_2 * Positive_deviation_crit_2 + weight_crit_3 * Positive_deviation_crit_3 + weight_lca * Positive_deviation_lca; # New objectives
 
 # Can choose between TotalGWP, TotalCost, TotalCrit_1, TotalCrit_2, TotalCrit_3, TotalLCA and Multi_crit_obj
-minimize obj: TotalCrit_3
+minimize obj:  Multi_crit_obj

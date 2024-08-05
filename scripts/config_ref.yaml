@@ -26,12 +26,12 @@
 'Crit_2_max': 1000000;
 'Crit_3_max': 1000000;
 
-'Weight_Cost' : 1;
+'Weight_Cost' : 0.5;
 'Weight_GWP' : 0;
 'Weight_Crit1' : 0;
 'Weight_Crit2' : 0;
 'Weight_Crit3' : 0;
-'Weight_LCA' : 0;
+'Weight_LCA' : 0.5;
 
 
 #Criterion limits
