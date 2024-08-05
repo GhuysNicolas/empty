@@ -2,17 +2,17 @@
 
 print "TotalCost", TotalCost/1000;
 print "GWP_tot", (sum {j in TECHNOLOGIES} (GWP_constr [j] / lifetime [j]) + sum {i in RESOURCES} GWP_op [i])/1000;
-print "GWP_op", (sum {i in RESOURCES} GWP_op [i])/1000;
-print "GWP_cstr", (sum {j in TECHNOLOGIES} (GWP_constr [j] / lifetime [j]))/1000;
+#print "GWP_op", (sum {i in RESOURCES} GWP_op [i])/1000;
+#print "GWP_cstr", (sum {j in TECHNOLOGIES} (GWP_constr [j] / lifetime [j]))/1000;
 # New objectives #
-#print "Crit_1_tot", TotalCrit_1;
-#print "Crit_2_tot", TotalCrit_2;
-#print "Crit_3_tot", TotalCrit_3;
+print "Crit_1_tot", TotalCrit_1;
+print "Crit_2_tot", TotalCrit_2;
+print "Crit_3_tot", TotalCrit_3;
 print "LCA_tot", TotalLCA/1000;
-print "LCA_cstr", (sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]))/1000;
-print "LCA_op", (sum {j in TECHNOLOGIES} LCA_op [j])/1000;
-print "LCA_res", (sum {i in RESOURCES} LCA_res [i])/1000;
-print "Einv", TotalCrit_1/1000;
+#print "LCA_cstr", (sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]))/1000;
+#print "LCA_op", (sum {j in TECHNOLOGIES} LCA_op [j])/1000;
+#print "LCA_res", (sum {i in RESOURCES} LCA_res [i])/1000;
+#print "Einv", TotalCrit_1/1000;
 
 
 ## Print cost breakdown to txt file.
@@ -48,23 +48,23 @@ printf "%s\t%.6f\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then LCA_tech[i] / life
 
 ## Print Crit_1 breakdown to txt file
 print "--------------SAVING Crit_1 ----------";
-printf "%s\t%s\t%s\n", "Name", "Crit_1_constr", "Crit_1_op" > (PathName & "/crit_1_breakdown.txt");
+printf "%s\t%s\t%s\t%s\n", "Name", "Crit_1_tech", "Crit_1_res", "Crit_1_op" > (PathName & "/crit_1_breakdown.txt");
 for {i in TECHNOLOGIES union RESOURCES} {
-printf "%s\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_1_constr[i] / lifetime[i] else 0, if i in RESOURCES then Crit_1_op[i] else 0 >> (PathName & "/crit_1_breakdown.txt");
+printf "%s\t%.6f\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_1_tech[i] / lifetime[i] else 0, if i in RESOURCES then Crit_1_res[i] else 0, if i in TECHNOLOGIES then Crit_1_op[i] else 0 >> (PathName & "/crit_1_breakdown.txt");
 }
 
 ## Print Crit_2 breakdown to txt file
 print "--------------SAVING Crit_2 ----------";
-printf "%s\t%s\t%s\n", "Name", "Crit_2_constr", "Crit_2_op" > (PathName & "/crit_2_breakdown.txt");
+printf "%s\t%s\t%s\t%s\n", "Name", "Crit_2_tech", "Crit_2_res", "Crit_2_op" > (PathName & "/crit_2_breakdown.txt");
 for {i in TECHNOLOGIES union RESOURCES} {
-printf "%s\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_2_constr[i] / lifetime[i] else 0, if i in RESOURCES then Crit_2_op[i] else 0 >> (PathName & "/crit_2_breakdown.txt");
+printf "%s\t%.6f\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_2_tech[i] / lifetime[i] else 0, if i in RESOURCES then Crit_2_res[i] else 0, if i in TECHNOLOGIES then Crit_2_op[i] else 0 >> (PathName & "/crit_2_breakdown.txt");
 }
 
 ## Print Crit_3 breakdown to txt file
 print "--------------SAVING Crit_3 ----------";
-printf "%s\t%s\t%s\n", "Name", "Crit_3_constr", "Crit_3_op" > (PathName & "/crit_3_breakdown.txt");
+printf "%s\t%s\t%s\t%s\n", "Name", "Crit_3_tech", "Crit_3_res", "Crit_3_op" > (PathName & "/crit_3_breakdown.txt");
 for {i in TECHNOLOGIES union RESOURCES} {
-printf "%s\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_3_constr[i] / lifetime[i] else 0, if i in RESOURCES then Crit_3_op[i] else 0 >> (PathName & "/crit_3_breakdown.txt");
+printf "%s\t%.6f\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_3_tech[i] / lifetime[i] else 0, if i in RESOURCES then Crit_3_res[i] else 0, if i in TECHNOLOGIES then Crit_3_op[i] else 0 >> (PathName & "/crit_3_breakdown.txt");
 }
 
 ## Print losses to txt file

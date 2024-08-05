@@ -129,14 +129,17 @@ param lca_tech {TECHNOLOGIES} ;
 param lca_res {RESOURCES} ;
 param lca_op {TECHNOLOGIES} ;
 param lca_limit >= 0; # [GWh/year] maximum system energy invested allowed
-param crit_1_op {RESOURCES} >= 0; # Energy invested to get a resources [GWh/y] #
-param crit_1_constr {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_1_res {RESOURCES} ; # Energy invested to get a resources [GWh/y] #
+param crit_1_op {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_1_tech {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
 param crit_1_limit >=0; # [GWh/year] maximum system energy invested allowed
-param crit_2_op {RESOURCES} >= 0; # criteria to get a resources [X/y] #
-param crit_2_constr {TECHNOLOGIES} >= 0; # criteria in the construction of the technologies [X/GW].
+param crit_2_res {RESOURCES}; # Energy invested to get a resources [GWh/y] #
+param crit_2_op {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_2_tech {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
 param crit_2_limit >=0; # [GWh/year] maximum system criteria allowed
-param crit_3_op {RESOURCES} >= 0; # criteria to get a resources [X/y] #
-param crit_3_constr {TECHNOLOGIES} >= 0; # criteria in the construction of the technologies [X/GW].
+param crit_3_res {RESOURCES}; # Energy invested to get a resources [GWh/y] #
+param crit_3_op {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_3_tech {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
 param crit_3_limit >=0; # [GWh/year] maximum system criteria allowed
 
 # New parameters #
@@ -189,30 +192,30 @@ param goal_crit_2_norm >= 0;
 param goal_crit_3_norm >= 0;
 
 # Criterias weights for the multicriteria optimisation
-let weight_cost := 0.7;
-let weight_gwp := 0.3;
+#let weight_cost := 0.7;
+#let weight_gwp := 0.3;
 
 # New objectives weights #
-let weight_crit_1 := 0.00;
-let weight_crit_2 := 0.00;
-let weight_crit_3 := 0.00;
-let weight_lca := 0.00;
+#let weight_crit_1 := 0.00;
+#let weight_crit_2 := 0.00;
+#let weight_crit_3 := 0.00;
+#let weight_lca := 0.00;
 
 # Criterias normalization setup (min and max obtain with single criterion optimisation): crit_normalised = (crit - crit_min) / (crit_max - crit_min)
-let cost_min := 1000;
-let cost_max := 70000;
-let gwp_min := 5000;
-let gwp_max := 100000;
+#let cost_min := 1000;
+#let cost_max := 70000;
+#let gwp_min := 5000;
+#let gwp_max := 100000;
 
 # New objectives #
 let lca_min := 0;
-let lca_max := 10000000;
-let crit_1_min := 20000;
-let crit_1_max := 10000000;
-let crit_2_min := 150;#20
-let crit_2_max := 55000;
-let crit_3_min := 950;#14
-let crit_3_max := 12000;
+#let lca_max := 10000000;
+#let crit_1_min := 20000;
+#let crit_1_max := 10000000;
+#let crit_2_min := 150;#20
+#let crit_2_max := 55000;
+#let crit_3_min := 950;#14
+#let crit_3_max := 12000;
 
 let goal_cost_norm := 0;
 let goal_gwp_norm := 0;
@@ -255,15 +258,17 @@ var LCA_res {RESOURCES} >= -10000000; # LCA of the extraction/production/transpo
 var LCA_op {TECHNOLOGIES} >= -10000000; # LCA of the operation of the technologies
 
 var TotalCrit_1 >= 0; # Crit_1_tot [GWh/year]: Total Cumulative energy demand (Crit_1) in the system
-var Crit_1_constr {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_1_op {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
+var Crit_1_tech {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
+var Crit_1_op {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
+var Crit_1_res {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
 var TotalCrit_2 >= 0; # Crit_2_tot [X/year]: Total Cumulative Crit_2 in the system
-var Crit_2_constr {TECHNOLOGIES} >= 0; #Total Crit_2 of the technologies
-var Crit_2_op {RESOURCES} >= 0; # Total yearly Crit_2 of the resources
+var Crit_2_tech {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
+var Crit_2_op {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
+var Crit_2_res {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
 var TotalCrit_3 >= 0; # Crit_3_tot [X/year]: Total Cumulative Crit_3 in the system
-var Crit_3_constr {TECHNOLOGIES} >= 0; #Total Crit_3 of the technologies
-var Crit_3_op {RESOURCES} >= 0; # Total yearly Crit_3 of the resources
-
+var Crit_3_tech {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
+var Crit_3_op {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
+var Crit_3_res {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
 ##Dependent variables [Table 2.4] :
 var End_uses {LAYERS, HOURS, TYPICAL_DAYS} >= 0; #EndUses [GW]: total demand for each type of end-uses (hourly power). Defined for all layers (0 if not demand). [Mpkm] or [Mtkm] for passenger or freight mobility.
 var TotalCost >= 0; # C_tot [ktCO2-eq./year]: Total GWP emissions in the system.
@@ -418,57 +423,60 @@ subject to lca_op_calc {j in TECHNOLOGIES}:
 
 ## Criteria 1
 #-----------
+# ---------
+# [Eq. 1001.2]
+subject to crit_1_tech_calc {j in TECHNOLOGIES}:
+	Crit_1_tech [j] = crit_1_tech [j] * F [j];
+
+# [Eq. 1001.3]
+subject to crit_1_res_calc {i in RESOURCES}:
+	Crit_1_res [i] = crit_1_res [i] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} ( F_t [i, h, td] * t_op [h, td] );
+
+# [Eq. 1001.4]
+subject to crit_1_op_calc {j in TECHNOLOGIES}:
+	Crit_1_op [j] = crit_1_op [j] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} (F_t [j, h, td] * t_op [h, td]);
 
 # [Eq. 1001.1]
 subject to totalCrit_1_calc:
-	TotalCrit_1 = sum {j in TECHNOLOGIES} (Crit_1_constr [j] / lifetime [j]) + sum {i in RESOURCES} Crit_1_op [i];
-	#JUST RESOURCES :          TotalCrit_1 = sum {i in RESOURCES} Crit_1_op [i];
-	#JUST GREY EMISSIONS:	   TotalCrit_1 = sum {j in TECHNOLOGIES} (Crit_1_constr [j] / lifetime [j]);
-	#INCLUDING GREY EMISSIONS: TotalCrit_1 = sum {j in TECHNOLOGIES} (Crit_1_constr [j] / lifetime [j]) + sum {i in RESOURCES} Crit_1_op [i];
-
-# [Eq. 1001.2]
-subject to crit_1_constr_calc {j in TECHNOLOGIES}:
-	Crit_1_constr [j] = crit_1_constr [j] * F [j];
-
-# [Eq. 1001.3]
-subject to crit_1_op_calc {i in RESOURCES}:
-	Crit_1_op [i] = crit_1_op [i] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} ( F_t [i, h, td] * t_op [h, td] );
+	TotalCrit_1 = sum {j in TECHNOLOGIES} (Crit_1_tech [j] / lifetime [j]) + sum {i in RESOURCES} Crit_1_res [i] + sum {j in TECHNOLOGIES} Crit_1_op [j];
 
 ## Criteria 2
 #-----------
 
-# [Eq. 1002.1]
-subject to totalCrit_2_calc:
-	TotalCrit_2 = sum {j in TECHNOLOGIES} (Crit_2_constr [j] / lifetime [j]) + sum {i in RESOURCES} Crit_2_op [i];
-	#JUST RESOURCES :          TotalCrit_2 = sum {i in RESOURCES} Crit_2_op [i];
-	#JUST GREY EMISSIONS:	   TotalCrit_2 = sum {j in TECHNOLOGIES} (Crit_2_constr [j] / lifetime [j]);
-	#INCLUDING GREY EMISSIONS: TotalCrit_2 = sum {j in TECHNOLOGIES} (Crit_2_constr [j] / lifetime [j]) + sum {i in RESOURCES} Crit_2_op [i];
-
 # [Eq. 1002.2]
-subject to crit_2_constr_calc {j in TECHNOLOGIES}:
-	Crit_2_constr [j] = crit_2_constr [j] * F [j];
+subject to crit_2_tech_calc {j in TECHNOLOGIES}:
+	Crit_2_tech [j] = crit_2_tech [j] * F [j];
 
 # [Eq. 1002.3]
-subject to crit_2_op_calc {i in RESOURCES}:
-	Crit_2_op [i] = crit_2_op [i] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} ( F_t [i, h, td] * t_op [h, td] );
+subject to crit_2_res_calc {i in RESOURCES}:
+	Crit_2_res [i] = crit_2_res [i] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} ( F_t [i, h, td] * t_op [h, td] );
+
+# [Eq. 1002.4]
+subject to crit_2_op_calc {j in TECHNOLOGIES}:
+	Crit_2_op [j] = crit_2_op [j] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} (F_t [j, h, td] * t_op [h, td]);
+
+# [Eq. 1002.1]
+subject to totalCrit_2_calc:
+	TotalCrit_2 = sum {j in TECHNOLOGIES} (Crit_2_tech [j] / lifetime [j]) + sum {i in RESOURCES} Crit_2_res [i] + sum {j in TECHNOLOGIES} Crit_2_op [j];
 
 ## Criteria 3
 #-----------
 
-# [Eq. 1003.1]
-subject to totalCrit_3_calc:
-	TotalCrit_3 = sum {j in TECHNOLOGIES} (Crit_3_constr [j] / lifetime [j]) + sum {i in RESOURCES} Crit_3_op [i];
-	#JUST RESOURCES :          TotalCrit_3 = sum {i in RESOURCES} Crit_3_op [i];
-	#JUST GREY EMISSIONS:	   TotalCrit_3 = sum {j in TECHNOLOGIES} (Crit_3_constr [j] / lifetime [j]);
-	#INCLUDING GREY EMISSIONS: TotalCrit_3 = sum {j in TECHNOLOGIES} (Crit_3_constr [j] / lifetime [j]) + sum {i in RESOURCES} Crit_3_op [i];
-
 # [Eq. 1003.2]
-subject to crit_3_constr_calc {j in TECHNOLOGIES}:
-	Crit_3_constr [j] = crit_3_constr [j] * F [j];
+subject to crit_3_tech_calc {j in TECHNOLOGIES}:
+	Crit_3_tech [j] = crit_3_tech [j] * F [j];
 
 # [Eq. 1003.3]
-subject to crit_3_op_calc {i in RESOURCES}:
-	Crit_3_op [i] = crit_3_op [i] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} ( F_t [i, h, td] * t_op [h, td] );
+subject to crit_3_res_calc {i in RESOURCES}:
+	Crit_3_res [i] = crit_3_res [i] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} ( F_t [i, h, td] * t_op [h, td] );
+
+# [Eq. 1003.4]
+subject to crit_3_op_calc {j in TECHNOLOGIES}:
+	Crit_3_op [j] = crit_3_op [j] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} (F_t [j, h, td] * t_op [h, td]);
+
+# [Eq. 1003.1]
+subject to totalCrit_3_calc:
+	TotalCrit_3 = sum {j in TECHNOLOGIES} (Crit_3_tech [j] / lifetime [j]) + sum {i in RESOURCES} Crit_3_res [i] + sum {j in TECHNOLOGIES} Crit_3_op [j];
 
 ## Multiplication factor
 #-----------------------
@@ -725,4 +733,4 @@ subject to Multi_crit_computation :
 	Multi_crit_obj = Positive_deviation_cost * weight_cost + weight_gwp * Positive_deviation_gwp + weight_crit_1 * Positive_deviation_crit_1 + weight_crit_2 * Positive_deviation_crit_2 + weight_crit_3 * Positive_deviation_crit_3 ;#+ weight_lca * Positive_deviation_lca; # New objectives
 
 # Can choose between TotalGWP, TotalCost, TotalCrit_1, TotalCrit_2, TotalCrit_3, TotalLCA and Multi_crit_obj
-minimize obj: TotalCost
+minimize obj: TotalCrit_3

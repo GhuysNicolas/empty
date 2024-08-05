@@ -63,16 +63,40 @@ def print_data(config):
 
 
         # New objectives #
-        lca_limit = config['LCA_limit']
-        crit_1_limit = config['Crit_1_limit']
-        crit_2_limit = config['Crit_2_limit']
-        crit_3_limit = config['Crit_3_limit']
 
+        cost_min = config['Cost_min']
+        gwp_min = config['GWP_min']
+        lca_min = config['LCA_min']
+        crit_1_min = config['Crit_1_min']
+        crit_2_min = config['Crit_2_min']
+        crit_3_min = config['Crit_3_min']
+
+        cost_max = config['Cost_max']
+        gwp_max = config['GWP_max']
+        lca_max = config['LCA_max']
+        crit_1_max = config['Crit_1_max']
+        crit_2_max = config['Crit_2_max']
+        crit_3_max = config['Crit_3_max']
+
+
+        cost_limit = cost_max
+        gwp_limit = gwp_max
+        lca_limit =  lca_max
+        crit_1_limit =  crit_1_max
+        crit_2_limit = crit_2_max
+        crit_3_limit = crit_3_max
+
+        weight_lca = config['Weight_LCA']
+        weight_gwp = config['Weight_GWP']
+        weight_cost = config['Weight_Cost']
+        weight_crit_1 = config['Weight_Crit1']
+        weight_crit_2 = config['Weight_Crit2']
+        weight_crit_3 = config['Weight_Crit3']
 
         # Pre-processing df #
 
         # pre-processing resources # New objectives # # New parameters #
-        resources_simple = resources.loc[:, ['avail', 'gwp_op', 'c_op', 'crit_1_op', 'crit_2_op', 'crit_3_op', 'lca_res' '']]
+        resources_simple = resources.loc[:, ['avail', 'gwp_op', 'c_op', 'crit_1_res', 'crit_2_res', 'crit_3_res', 'lca_res' '']]
         resources_simple.index.name = 'param :'
         resources_simple = resources_simple.astype('float')
         # pre-processing eud
@@ -297,10 +321,27 @@ def print_data(config):
         print_param('cost_limit', cost_limit, 'cost_limit [beuro/year]: maximum Cost', out_path)#NEW_cost
         # New objectives #
         print_param('lca_limit', lca_limit, 'lca_limit [impact/year]: maximum impact on the environment', out_path)
-
         print_param('crit_1_limit', crit_1_limit, 'crit_1_limit [GWh/year]: maximum GWh invested', out_path)
         print_param('crit_2_limit', crit_2_limit, 'crit_2_limit [GWh/year]: maximum GWh invested', out_path)
         print_param('crit_3_limit', crit_3_limit, 'crit_3_limit [GWh/year]: maximum GWh invested', out_path)
+        print_param('lca_min', lca_min, 'lca_min [impact/year]: maximum impact on the environment', out_path)
+        print_param('crit_1_min', crit_1_min, 'crit_1_min [GWh/year]: maximum GWh invested', out_path)
+        print_param('crit_2_min', crit_2_min, 'crit_2_min [GWh/year]: maximum GWh invested', out_path)
+        print_param('crit_3_min', crit_3_min, 'crit_3_min [GWh/year]: maximum GWh invested', out_path)
+        print_param('gwp_max', gwp_max, 'gwp_max [ktCO2-eq./year]: maximum GWP emissions', out_path)  # ligne 99 excel
+        print_param('cost_max', cost_max, 'cost_max [beuro/year]: maximum Cost', out_path)  # NEW_cost
+        print_param('gwp_min', gwp_min, 'gwp_min [ktCO2-eq./year]: maximum GWP emissions', out_path) #ligne 99 excel
+        print_param('cost_min', cost_min, 'cost_min [beuro/year]: maximum Cost', out_path)#NEW_cost
+        print_param('lca_max', lca_max, 'lca_max [impact/year]: maximum impact on the environment', out_path)
+        print_param('crit_1_max', crit_1_max, 'crit_1_max [GWh/year]: maximum GWh invested', out_path)
+        print_param('crit_2_max', crit_2_max, 'crit_2_max [GWh/year]: maximum GWh invested', out_path)
+        print_param('crit_3_max', crit_3_max, 'crit_3_max [GWh/year]: maximum GWh invested', out_path)
+        print_param('weight_lca', weight_lca, 'Weight_lca [GWh/year]: maximum GWh invested', out_path)
+        print_param('weight_gwp', weight_gwp, 'Weight_gwp [GWh/year]: maximum GWh invested', out_path)
+        print_param('weight_cost', weight_cost, 'Weight_cost [GWh/year]: maximum GWh invested', out_path)
+        print_param('weight_crit_1', weight_crit_1, 'Weight_crit1 [GWh/year]: maximum GWh invested', out_path)
+        print_param('weight_crit_2', weight_crit_2, 'Weight_crit2 [GWh/year]: maximum GWh invested', out_path)
+        print_param('weight_crit_3', weight_crit_3, 'Weight_crit3 [GWh/year]: maximum GWh invested', out_path)
 
         print_param('solar_area', solar_area, '', out_path)
         print_param('power_density_pv', power_density_pv, 'PV : 1 kW/4.22m2   => 0.2367 kW/m2 => 0.2367 GW/km2',
