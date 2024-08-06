@@ -108,9 +108,9 @@ else {
 
             ## Print Crit_1 breakdown to txt file
 	        print "---------- SAVING Crit_1 ----------";
-	        printf "%s\t%s\t%s\n", "Name", "Crit_1_constr", "Crit_1_op" > (PathName & "/crit_1_breakdown.txt");
+            printf "%s\t%s\t%s\t%s\n", "Name", "Crit_1_tech", "Crit_1_res", "Crit_1_op" > (PathName & "/crit_1_breakdown.txt");
 	        for {i in TECHNOLOGIES union RESOURCES} {
-		    printf "%s\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_1_constr[i] / lifetime[i] else 0, if i in RESOURCES then Crit_1_op[i] else 0 >> (PathName & "/crit_1_breakdown.txt");
+		    printf "%s\t%.6f\t%.6f\t%.6f\n", i, if i in TECHNOLOGIES then Crit_1_tech[i] / lifetime[i] else 0, if i in RESOURCES then Crit_1_res[i] else 0, if i in TECHNOLOGIES then Crit_1_op[i] else 0 >> (PathName & "/crit_1_breakdown.txt");
 	        }
 
             ## Print Crit_2 breakdown to txt file

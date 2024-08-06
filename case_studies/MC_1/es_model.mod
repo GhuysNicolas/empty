@@ -130,16 +130,16 @@ param lca_res {RESOURCES} ;
 param lca_op {TECHNOLOGIES} ;
 param lca_limit >= 0; # [GWh/year] maximum system energy invested allowed
 param crit_1_res {RESOURCES} ; # Energy invested to get a resources [GWh/y] #
-param crit_1_op {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
-param crit_1_tech {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_1_op {TECHNOLOGIES}; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_1_tech {TECHNOLOGIES}; # Energy invested in the construction of the technologies [GWh/GW].
 param crit_1_limit >=0; # [GWh/year] maximum system energy invested allowed
 param crit_2_res {RESOURCES}; # Energy invested to get a resources [GWh/y] #
-param crit_2_op {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
-param crit_2_tech {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_2_op {TECHNOLOGIES} ; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_2_tech {TECHNOLOGIES}; # Energy invested in the construction of the technologies [GWh/GW].
 param crit_2_limit >=0; # [GWh/year] maximum system criteria allowed
 param crit_3_res {RESOURCES}; # Energy invested to get a resources [GWh/y] #
-param crit_3_op {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
-param crit_3_tech {TECHNOLOGIES} >= 0; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_3_op {TECHNOLOGIES} ; # Energy invested in the construction of the technologies [GWh/GW].
+param crit_3_tech {TECHNOLOGIES} ; # Energy invested in the construction of the technologies [GWh/GW].
 param crit_3_limit >=0; # [GWh/year] maximum system criteria allowed
 
 # New parameters #
@@ -208,7 +208,7 @@ param goal_crit_3_norm >= 0;
 #let gwp_max := 100000;
 
 # New objectives #
-let lca_min := 0;
+#let lca_min := 0;
 #let lca_max := 10000000;
 #let crit_1_min := 20000;
 #let crit_1_max := 10000000;
@@ -259,16 +259,16 @@ var LCA_op {TECHNOLOGIES} >= -10000000; # LCA of the operation of the technologi
 
 var TotalCrit_1 >= 0; # Crit_1_tot [GWh/year]: Total Cumulative energy demand (Crit_1) in the system
 var Crit_1_tech {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_1_op {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_1_res {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
+var Crit_1_op {TECHNOLOGIES} >= -10000000; #Total Crit_1 of the technologies
+var Crit_1_res {RESOURCES} >= -10000000; # Total yearly Crit_1 of the resources
 var TotalCrit_2 >= 0; # Crit_2_tot [X/year]: Total Cumulative Crit_2 in the system
 var Crit_2_tech {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_2_op {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_2_res {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
+var Crit_2_op {TECHNOLOGIES} >= -10000000; #Total Crit_1 of the technologies
+var Crit_2_res {RESOURCES} >= -10000000; # Total yearly Crit_1 of the resources
 var TotalCrit_3 >= 0; # Crit_3_tot [X/year]: Total Cumulative Crit_3 in the system
 var Crit_3_tech {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_3_op {TECHNOLOGIES} >= 0; #Total Crit_1 of the technologies
-var Crit_3_res {RESOURCES} >= 0; # Total yearly Crit_1 of the resources
+var Crit_3_op {TECHNOLOGIES} >= -10000000; #Total Crit_1 of the technologies
+var Crit_3_res {RESOURCES} >= -10000000; # Total yearly Crit_1 of the resources
 ##Dependent variables [Table 2.4] :
 var End_uses {LAYERS, HOURS, TYPICAL_DAYS} >= 0; #EndUses [GW]: total demand for each type of end-uses (hourly power). Defined for all layers (0 if not demand). [Mpkm] or [Mtkm] for passenger or freight mobility.
 var TotalCost >= 0; # C_tot [ktCO2-eq./year]: Total GWP emissions in the system.
@@ -424,6 +424,10 @@ subject to lca_op_calc {j in TECHNOLOGIES}:
 ## Criteria 1
 #-----------
 # ---------
+# [Eq. 1001.1]
+subject to totalCrit_1_calc:
+	TotalCrit_1 = sum {j in TECHNOLOGIES} (Crit_1_tech [j] / lifetime [j]) + sum {i in RESOURCES} Crit_1_res [i] + sum {j in TECHNOLOGIES} Crit_1_op [j];
+
 # [Eq. 1001.2]
 subject to crit_1_tech_calc {j in TECHNOLOGIES}:
 	Crit_1_tech [j] = crit_1_tech [j] * F [j];
@@ -435,10 +439,6 @@ subject to crit_1_res_calc {i in RESOURCES}:
 # [Eq. 1001.4]
 subject to crit_1_op_calc {j in TECHNOLOGIES}:
 	Crit_1_op [j] = crit_1_op [j] * sum {t in PERIODS, h in HOUR_OF_PERIOD [t], td in TYPICAL_DAY_OF_PERIOD [t]} (F_t [j, h, td] * t_op [h, td]);
-
-# [Eq. 1001.1]
-subject to totalCrit_1_calc:
-	TotalCrit_1 = sum {j in TECHNOLOGIES} (Crit_1_tech [j] / lifetime [j]) + sum {i in RESOURCES} Crit_1_res [i] + sum {j in TECHNOLOGIES} Crit_1_op [j];
 
 ## Criteria 2
 #-----------
@@ -733,4 +733,4 @@ subject to Multi_crit_computation :
 	Multi_crit_obj = Positive_deviation_cost * weight_cost + weight_gwp * Positive_deviation_gwp + weight_crit_1 * Positive_deviation_crit_1 + weight_crit_2 * Positive_deviation_crit_2 + weight_crit_3 * Positive_deviation_crit_3 + weight_lca * Positive_deviation_lca; # New objectives
 
 # Can choose between TotalGWP, TotalCost, TotalCrit_1, TotalCrit_2, TotalCrit_3, TotalLCA and Multi_crit_obj
-minimize obj:  Multi_crit_obj
+minimize obj:  TotalCost

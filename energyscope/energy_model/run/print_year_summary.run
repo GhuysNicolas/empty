@@ -9,9 +9,9 @@ print "Crit_1_tot", TotalCrit_1;
 print "Crit_2_tot", TotalCrit_2;
 print "Crit_3_tot", TotalCrit_3;
 print "LCA_tot", TotalLCA/1000;
-#print "LCA_cstr", (sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]))/1000;
-#print "LCA_op", (sum {j in TECHNOLOGIES} LCA_op [j])/1000;
-#print "LCA_res", (sum {i in RESOURCES} LCA_res [i])/1000;
+print "LCA_cstr", (sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]))/1000;
+print "LCA_op", (sum {j in TECHNOLOGIES} LCA_op [j])/1000;
+print "LCA_res", (sum {i in RESOURCES} LCA_res [i])/1000;
 #print "Einv", TotalCrit_1/1000;
 
 

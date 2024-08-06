@@ -1,52 +1,50 @@
 
-Presolve eliminates 657355 constraints and 425985 variables.
+Presolve eliminates 653662 constraints and 420584 variables.
 "option presolve 10;" used, but "option presolve 11;" might work better.
 Adjusted problem:
-269567 variables, all linear
-497308 constraints, all linear; 1653898 nonzeros
-	354280 equality constraints
-	143028 inequality constraints
+274968 variables, all linear
+501001 constraints, all linear; 1674580 nonzeros
+	354214 equality constraints
+	146787 inequality constraints
 1 linear objective; 1 nonzero.
 
-Setting $presolve_fixeps < 9.87e-14 could change presolve results.
-
 presolve results:
-	variables omitted:	425985
-	constraints omitted:	657355
-	ranges relaxed:		176694
-	bounds improved:	418875
-	constraint_drop_tol breakpoints: 0, 0, 0.6601679396808322
+	variables omitted:	420584
+	constraints omitted:	653662
+	ranges relaxed:		180465
+	bounds improved:	420009
+	constraint_drop_tol breakpoints: 0, 0, 0.6601678135339171
 	nba cycles:		9
-	bound row scans:	2116609
-	row-scan updates:	946836
+	bound row scans:	1800530
+	row-scan updates:	837681
 Gurobi 11.0.1:   pre:dual = -1
   alg:method = 2
   bar:crossover = 0
   pre:passes = 3
   bar:convtol = 1e-06
   pre:solve = -1
-Gurobi 11.0.1: optimal solution; objective 333.5365004
+Gurobi 11.0.1: optimal solution; objective 47193.58924
 0 simplex iterations
-112 barrier iterations
+115 barrier iterations
  
 ------------ WARNINGS ------------
 WARNING:  "Tolerance violations"
   Type                         MaxAbs [Name]   MaxRel [Name]
-* expr '_linrange'             7E-06           -             
+* expr '_linrange'             4E-04           -             
 *: Using the solver's aux variable values.
 Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 23.531
+_solve_elapsed_time = 30.547
 
-TotalCost 42.000000002606484
-GWP_tot 82.36546889226608
-Crit_1_tot 855662.3375093449
-Crit_2_tot 408186.1397131634
-Crit_3_tot 816372.2791886621
-LCA_tot 66.70729962251508
+TotalCost 47.19358924328659
+GWP_tot 70.81388900356266
+Crit_1_tot 378.2201560701672
+Crit_2_tot 668415.6811635138
+Crit_3_tot 66737.82933622251
+LCA_tot 48.99999999953379
 --------------SAVING COSTS -----------
 --------------SAVING RESOURCES -----------
 --------------SAVING GWP -----------
