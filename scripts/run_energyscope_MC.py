@@ -9,7 +9,6 @@ import csv
 output_filename = r"C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/MC_outputs/MC_values.csv"
 
 # Output from 1st Algorithm
-
 input_weights = [
     [1.0, 0.0, 0.0, 0.0, 0.0],
     [0.0, 1.0, 0.0, 0.0, 0.0],
@@ -23,8 +22,8 @@ def modify_weights(config, input_weights, j):
     new_weights = input_weights [j]
     if 'Weight_Cost' in config:
         config['Weight_Cost'] = new_weights[0]
-    if 'Weight_GWP' in config:
-        config['Weight_GWP'] = new_weights[1]
+    if 'Weight_LCA' in config:
+        config['Weight_LCA'] = new_weights[1]
     if 'Weight_Crit1' in config:
         config['Weight_Crit1'] = new_weights[2]
     if 'Weight_Crit2' in config:
@@ -70,8 +69,7 @@ if __name__ == '__main__':
                         log_contents = log_file.readlines()
 
                     # Get the last 10 lines
-                    last_10_lines = log_contents[-10:]
-
+                    last_10_lines = log_contents[-17:-12]
                     # Append the last 10 lines to the output file
                     with open(output_filename, 'a') as f:
                         f.write(''.join(last_10_lines) + '\n')  # Add a newline for separation
@@ -85,5 +83,4 @@ if __name__ == '__main__':
     print(f"End time: {end_time}")
     duration = end_time - start_time
     print(f"Duration: {duration}")
-
 

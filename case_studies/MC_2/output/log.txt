@@ -1,53 +1,52 @@
 
-Presolve eliminates 653663 constraints and 420585 variables.
+Presolve eliminates 653662 constraints and 420584 variables.
 "option presolve 10;" used, but "option presolve 11;" might work better.
 Adjusted problem:
-274967 variables, all linear
-501000 constraints, all linear; 1674577 nonzeros
-	354213 equality constraints
+274968 variables, all linear
+501001 constraints, all linear; 1674579 nonzeros
+	354214 equality constraints
 	146787 inequality constraints
 1 linear objective; 1 nonzero.
 
 presolve results:
-	variables omitted:	420585
-	constraints omitted:	653663
+	variables omitted:	420584
+	constraints omitted:	653662
 	ranges relaxed:		180465
-	bounds improved:	420010
-	constraint_drop_tol breakpoints: 0, 0, 0.6601677856451715
+	bounds improved:	420009
+	constraint_drop_tol breakpoints: 0, 0, 0.6601678253646242
 	nba cycles:		9
-	bound row scans:	1797708
-	row-scan updates:	850670
+	bound row scans:	1770306
+	row-scan updates:	841128
 Gurobi 11.0.1:   pre:dual = -1
   alg:method = 2
   bar:crossover = 0
   pre:passes = 3
   bar:convtol = 1e-06
   pre:solve = -1
-Gurobi 11.0.1: optimal solution; objective 117500.4807
+Gurobi 11.0.1: optimal solution; objective 187.9573061
 0 simplex iterations
-118 barrier iterations
+102 barrier iterations
  
 ------------ WARNINGS ------------
 WARNING:  "Tolerance violations"
   Type                         MaxAbs [Name]   MaxRel [Name]
-* expr '_linrange'             1E-04           -             
+* expr '_linrange'             2E-04           -             
 *: Using the solver's aux variable values.
 Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 26.046
+_solve_elapsed_time = 24.188
 
-TotalCost 150.00000000283842
-GWP_tot 122.66712705586326
-Crit_1_tot 160.1690008919356
-Crit_2_tot 117500.4807378935
-Crit_3_tot 11344.56156889851
-LCA_tot 119.9999987848348
-LCA_cstr 4.50173405055785
-LCA_op 90.51604267673214
-LCA_res 24.98222205754483
+TotalCost 150.0000000054543
+Crit_1_tot 192.4289136626915
+Crit_2_tot 240326.6367281206
+Crit_3_tot 10545.07618777818
+LCA_tot 98.05149405579125
+LCA_cstr 4.545713588019066
+LCA_op 75.66380211080657
+LCA_res 17.841978356965626
 --------------SAVING COSTS -----------
 --------------SAVING RESOURCES -----------
 --------------SAVING GWP -----------

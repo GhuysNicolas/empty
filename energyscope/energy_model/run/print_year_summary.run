@@ -1,7 +1,7 @@
 ## Saving year summary to output file
 
 print "TotalCost", TotalCost/1000;
-print "GWP_tot", (sum {j in TECHNOLOGIES} (GWP_constr [j] / lifetime [j]) + sum {i in RESOURCES} GWP_op [i])/1000;
+# "GWP_tot", (sum {j in TECHNOLOGIES} (GWP_constr [j] / lifetime [j]) + sum {i in RESOURCES} GWP_op [i])/1000;
 #print "GWP_op", (sum {i in RESOURCES} GWP_op [i])/1000;
 #print "GWP_cstr", (sum {j in TECHNOLOGIES} (GWP_constr [j] / lifetime [j]))/1000;
 # New objectives #
