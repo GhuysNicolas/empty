@@ -58,8 +58,8 @@ def print_data(config):
         # Prints the data into .dat file (out_path) with the right syntax for AMPL
         out_path = cs / config['case_study'] / 'ESTD_data.dat'
         # config['es_path'] + '/ESTD_data.dat'
-        cost_limit = config['Cost_limit'] #NEW_cost
-        gwp_limit = config['GWP_limit']
+        #cost_limit = config['Cost_limit'] #NEW_cost
+        #gwp_limit = config['GWP_limit']
 
 
         # New objectives #

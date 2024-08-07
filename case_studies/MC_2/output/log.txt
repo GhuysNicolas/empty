@@ -13,41 +13,41 @@ presolve results:
 	constraints omitted:	653663
 	ranges relaxed:		180465
 	bounds improved:	420010
-	constraint_drop_tol breakpoints: 0, 0, 0.6601678135339171
+	constraint_drop_tol breakpoints: 0, 0, 0.6601677856451715
 	nba cycles:		9
-	bound row scans:	1800532
-	row-scan updates:	837681
+	bound row scans:	1797708
+	row-scan updates:	850670
 Gurobi 11.0.1:   pre:dual = -1
   alg:method = 2
   bar:crossover = 0
   pre:passes = 3
   bar:convtol = 1e-06
   pre:solve = -1
-Gurobi 11.0.1: optimal solution; objective 233.7892745
+Gurobi 11.0.1: optimal solution; objective 117500.4807
 0 simplex iterations
-215 barrier iterations
+118 barrier iterations
  
 ------------ WARNINGS ------------
 WARNING:  "Tolerance violations"
   Type                         MaxAbs [Name]   MaxRel [Name]
-* expr '_linrange'             2E-05           -             
+* expr '_linrange'             1E-04           -             
 *: Using the solver's aux variable values.
 Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 70.39
+_solve_elapsed_time = 26.046
 
-TotalCost 10000.00000000064
-GWP_tot 0.2337892745319153
-Crit_1_tot 13799.12836410343
-Crit_2_tot 9999999.96661859
-Crit_3_tot 1597530.946698754
-LCA_tot 1442.5297644828381
-LCA_cstr 1403.0431293802333
-LCA_op 79.22441676467264
-LCA_res -39.737781662067924
+TotalCost 150.00000000283842
+GWP_tot 122.66712705586326
+Crit_1_tot 160.1690008919356
+Crit_2_tot 117500.4807378935
+Crit_3_tot 11344.56156889851
+LCA_tot 119.9999987848348
+LCA_cstr 4.50173405055785
+LCA_op 90.51604267673214
+LCA_res 24.98222205754483
 --------------SAVING COSTS -----------
 --------------SAVING RESOURCES -----------
 --------------SAVING GWP -----------
@@ -57,5 +57,3 @@ LCA_res -39.737781662067924
 --------------SAVING Crit_3 ----------
 --------------SAVING Losses -----------
 --------------SAVING ASSETS -----------
---------------SAVING STORAGE -----------
---------------SAVING LAYERS -----------

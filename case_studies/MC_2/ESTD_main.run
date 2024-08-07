@@ -56,7 +56,6 @@ else {
         }
         else {
 			include "c:\users\ghuysn\git_projects\energyscope_lca\energyscope\energy_model\run\print_year_summary.run";
-			include "c:\users\ghuysn\git_projects\energyscope_lca\energyscope\energy_model\run\print_hourly_data.run";
 			exit 0;
 		}
 	}

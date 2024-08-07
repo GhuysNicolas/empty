@@ -12,19 +12,19 @@
 
 ##### MC parameters ####
 
-'Cost_min': 0;
+'Cost_min': 43;
 'GWP_min': 0;
-'Crit_1_min': 0;
-'Crit_2_min': 0;
-'Crit_3_min': 0;
-'LCA_min' : 0;
+'Crit_1_min': 130;
+'Crit_2_min': 100000;
+'Crit_3_min': 10000;
+'LCA_min' : 1;
 
-'LCA_max' : 10000000;
-'Cost_max': 10000000;
+'LCA_max' : 120000;
+'Cost_max': 150000;
 'GWP_max': 10000000;
-'Crit_1_max': 10000000;
-'Crit_2_max': 10000000;
-'Crit_3_max': 10000000;
+'Crit_1_max': 700;
+'Crit_2_max': 3000000;
+'Crit_3_max': 300000;
 
 'Weight_Cost' : 0;
 'Weight_GWP' : 0;
@@ -35,13 +35,13 @@
 
 
 #Criterion limits
-'GWP_limit': 10000000 #[ktCO2-eq./year]
-'Cost_limit': 10000000 #[beuro/year]
+#'GWP_limit': 10000000 #[ktCO2-eq./year]
+#'Cost_limit': 10000000 #[beuro/year]
 
-'LCA_limit': 10000000 # 1000000000 #[impact_1/year]
-'Crit_1_limit': 10000000 #[impact_2/year]
-'Crit_2_limit': 10000000 #[impact_3/year]
-'Crit_3_limit': 10000000 #[impact_4/year]
+#'LCA_limit': 10000000 # 1000000000 #[impact_1/year]
+#'Crit_1_limit': 10000000 #[impact_2/year]
+#'Crit_2_limit': 10000000 #[impact_3/year]
+#'Crit_3_limit': 10000000 #[impact_4/year]
 
 # Relative path from main directory to energyscope subdirectories and files
 'data_dir': 'Data/2030_BE'  # Folders containing the csv data files
@@ -71,6 +71,6 @@ printing_td: True
                   'gurobi_options' : 'predual=-1 method=2 crossover=0 prepasses=3 barconvtol=1e-6 presolve=-1'
 }
 # Printing more detailed outputs
-'print_barh' : True
-'print_hourly_data': True
+'print_barh' : False
+'print_hourly_data': False
 'print_sankey': False
