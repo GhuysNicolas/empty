@@ -114,12 +114,12 @@
  param  crit_1_max  :=  700;;  #  crit_1_max  [GWh/year]:  maximum  GWh  invested 
  param  crit_2_max  :=  3000000;;  #  crit_2_max  [GWh/year]:  maximum  GWh  invested 
  param  crit_3_max  :=  300000;;  #  crit_3_max  [GWh/year]:  maximum  GWh  invested 
- param  weight_lca  :=  0.0;  #  Weight_lca  [GWh/year]:  maximum  GWh  invested 
+ param  weight_lca  :=  0.3;  #  Weight_lca  [GWh/year]:  maximum  GWh  invested 
  param  weight_gwp  :=  0;;  #  Weight_gwp  [GWh/year]:  maximum  GWh  invested 
- param  weight_cost  :=  0.0;  #  Weight_cost  [GWh/year]:  maximum  GWh  invested 
- param  weight_crit_1  :=  0.0;  #  Weight_crit1  [GWh/year]:  maximum  GWh  invested 
- param  weight_crit_2  :=  0.0;  #  Weight_crit2  [GWh/year]:  maximum  GWh  invested 
- param  weight_crit_3  :=  1.0;  #  Weight_crit3  [GWh/year]:  maximum  GWh  invested 
+ param  weight_cost  :=  0.3;  #  Weight_cost  [GWh/year]:  maximum  GWh  invested 
+ param  weight_crit_1  :=  0.13;  #  Weight_crit1  [GWh/year]:  maximum  GWh  invested 
+ param  weight_crit_2  :=  0.13;  #  Weight_crit2  [GWh/year]:  maximum  GWh  invested 
+ param  weight_crit_3  :=  0.13;  #  Weight_crit3  [GWh/year]:  maximum  GWh  invested 
  param  solar_area  :=  250; 
  param  power_density_pv  :=  0.2367;  #  PV  :  1  kW/4.22m2      =>  0.2367  kW/m2  =>  0.2367  GW/km2 
  param  power_density_solar_thermal  :=  0.2857;  #  Solar  thermal  :  1  kW/3.5m2  =>  0.2857  kW/m2  =>  0.2857  GW/km2 
