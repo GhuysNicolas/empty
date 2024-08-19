@@ -14,7 +14,7 @@ def preprocess_data_lca(data_xlsx) :
 # VALIDATION #
 df_lca = preprocess_data_lca(r"C:\Users\ghuysn\GIT_Projects\EnergyScope_multi_criteria\Data\pLCA_processed.xlsx")
 
-annee = '2035'
+annee = '2035_ref'
 categorie_LCA = 'LCA_LANDUSE'
 scenario = 'remind - SSP2-PkBudg1150'
 resultats = {}

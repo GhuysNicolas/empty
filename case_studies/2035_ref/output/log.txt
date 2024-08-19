@@ -1,0 +1,62 @@
+
+Presolve eliminates 651321 constraints and 419391 variables.
+"option presolve 10;" used, but "option presolve 11;" might work better.
+Adjusted problem:
+276161 variables, all linear
+503342 constraints, all linear; 1688203 nonzeros
+	355400 equality constraints
+	147942 inequality constraints
+1 linear objective; 1 nonzero.
+
+presolve results:
+	variables omitted:	419391
+	constraints omitted:	651321
+	ranges relaxed:		181050
+	bounds improved:	419085
+	constraint_drop_tol breakpoints: 0, 0, 0.6601678772713058
+	nba cycles:		9
+	bound row scans:	1777999
+	row-scan updates:	848189
+Gurobi 11.0.1:   pre:dual = -1
+  alg:method = 2
+  bar:crossover = 0
+  pre:passes = 3
+  bar:convtol = 1e-06
+  pre:solve = -1
+Gurobi 11.0.1: optimal solution; objective 41126.34182
+0 simplex iterations
+96 barrier iterations
+ 
+------------ WARNINGS ------------
+WARNING:  "Tolerance violations"
+  Type                         MaxAbs [Name]   MaxRel [Name]
+* variable bounds              2E-06           -             
+* expr '_linrange'             4E-03           -             
+*: Using the solver's aux variable values.
+Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
+solve_result = solved
+
+solve_result_num = 0
+
+_solve_elapsed_time = 22.406
+
+TotalCost 41.12634181635566
+LCA_tot 48.99999990037519
+Crit_1_tot 410.1250512589917
+Crit_2_tot 543780.5794487669
+Crit_3_tot 76931.1261471507
+LCA_cstr 7.157530432214063
+LCA_op 50.204692226017606
+LCA_res -8.362222757856495
+--------------SAVING COSTS -----------
+--------------SAVING RESOURCES -----------
+--------------SAVING GWP -----------
+--------------SAVING LCA ----------
+--------------SAVING Crit_1 ----------
+--------------SAVING Crit_2 ----------
+--------------SAVING Crit_3 ----------
+--------------SAVING Losses -----------
+--------------SAVING ASSETS -----------
+--------------SAVING STORAGE -----------
+--------------SAVING LAYERS -----------
+--------------SAVING SANKEY --------

@@ -10,11 +10,11 @@ output_filename = r"C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/MC
 
 # Output from 1st Algorithm
 input_weights = [
-    [1.0, 0.0, 0.0, 0.0, 0.0],
-    [0.0, 1.0, 0.0, 0.0, 0.0],
-    [0.5, 0.5, 1.0, 0.0, 0.0],
+    [1.0, 0.0, 0.0, 0.0, 0.0]
+    #[0.0, 1.0, 0.0, 0.0, 0.0],
+    #[0.5, 0.5, 1.0, 0.0, 0.0],
     #[0.0, 0.0, 0.0, 1.0, 0.0],
-    [0.3, 0.3, 0.13, 0.13, 0.13]
+    #[0.3, 0.3, 0.13, 0.13, 0.13]
 ]
 
 # DO NOT MODIFY
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     project_path = Path(__file__).parents[1]
 
     # loading the config file into a python dictionnary
-    config = es.load_config(config_fn='config_ref.yaml', project_path=project_path)
+    config = es.load_config(config_fn='config_ref_MC.yaml', project_path=project_path)
     config['Working_directory'] = os.getcwd()  # keeping current working directory into config
     start_time = datetime.datetime.now()
 
