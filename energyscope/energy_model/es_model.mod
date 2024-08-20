@@ -407,7 +407,8 @@ subject to gwp_op_calc {i in RESOURCES}:
 # ---------
 # [Eq. 1000.1]
 subject to totalLCA_calc:
-	TotalLCA = sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]) + sum {i in RESOURCES} LCA_res [i] + sum {j in TECHNOLOGIES} LCA_op [j];
+	#TotalLCA = sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]) + sum {i in RESOURCES} LCA_res [i] + sum {j in TECHNOLOGIES} LCA_op [j];
+    TotalLCA =  sum {i in RESOURCES} LCA_res [i] + sum {j in TECHNOLOGIES} LCA_op [j];
 
 # [Eq. 1000.2]
 subject to lca_tech_calc {j in TECHNOLOGIES}:
