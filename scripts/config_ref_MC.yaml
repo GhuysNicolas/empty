@@ -1,6 +1,6 @@
 # Case study definition
 # name of the case study. The problem formulation and ouptuts will be printed into the following relative path from main directory : case_studies/config['case_study']
-'case_study': 'MC_3'
+'case_study': 'MC_1'
 # number of typical days to consider
 'nbr_td': 12
 # Dictionnary with the dataframes containing all the data in the form : {'Demand': eud, 'Resources': resources, 'Technologies': technologies, 'End_uses_categories': end_uses_categories, 'Layers_in_out': layers_in_out, 'Storage_characteristics': storage_characteristics, 'Storage_eff_in': storage_eff_in, 'Storage_eff_out': storage_eff_out, 'Time_series': time_series, 'Misc': misc}
@@ -12,16 +12,16 @@
 
 ##### MC parameters ####
 
-'Cost_min': 43;
-'LCA_min' : 1;
+'Cost_min': 35;
+'LCA_min' : 1000;
 'Crit_1_min': 130;
 'Crit_2_min': 100000;
 'Crit_3_min': 10000;
 
 'Cost_max': 150000;
-'LCA_max' : 120000;
+'LCA_max' : 100000;
 'Crit_1_max': 700;
-'Crit_2_max': 3000000;
+'Crit_2_max': 2000000;
 'Crit_3_max': 300000;
 
 'Weight_Cost' : 0;
@@ -35,7 +35,7 @@
 'GWP_max': 10000000;
 
 # Relative path from main directory to energyscope subdirectories and files
-'data_dir': 'Data/2030_BE'  # Folders containing the csv data files
+'data_dir': 'Data/FEDECOM/BE_OK'  # Folders containing the csv data files
 'es_path': 'energyscope/energy_model'  # Path to the energy model (.mod and .run files)
 'cs_path': 'case_studies' # Path to the directory containing the different case studies
 'step1_path': 'energyscope/preprocessing/td_selection' # Path to the step1 selection of typical days

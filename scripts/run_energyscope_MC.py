@@ -10,11 +10,9 @@ output_filename = r"C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/MC
 
 # Output from 1st Algorithm
 input_weights = [
-    [1.0, 0.0, 0.0, 0.0, 0.0]
-    #[0.0, 1.0, 0.0, 0.0, 0.0],
-    #[0.5, 0.5, 1.0, 0.0, 0.0],
-    #[0.0, 0.0, 0.0, 1.0, 0.0],
-    #[0.3, 0.3, 0.13, 0.13, 0.13]
+    [1.0, 0.0, 0.0, 0.0, 0.0],
+    [0.0, 1.0, 0.0, 0.0, 0.0],
+    [0.2, 0.2, 0.2, 0.2, 0.2]
 ]
 
 # DO NOT MODIFY
