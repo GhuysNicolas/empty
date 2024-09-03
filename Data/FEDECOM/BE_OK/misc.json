@@ -4,7 +4,7 @@
     "solar_area" : 250,
 	"power_density_pv" : 0.2367,
     "power_density_solar_thermal" : 0.2857,
-	"share_mobility_public_min" : 0.199,
+	"share_mobility_public_min" : 0.0,
 	"share_mobility_public_max" : 0.5,
     "share_freight_train_min" : 0.109,
     "share_freight_train_max" : 0.25,
