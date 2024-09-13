@@ -1,0 +1,40 @@
+24/09/13 13:59:16 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Steering_committee\2050
+24/09/13 13:59:16 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/09/13 13:59:16 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/09/13 13:59:21 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/09/13 13:59:21 [INFO    ] (print_data): Printing ESTD_data.dat
+24/09/13 13:59:21 [INFO    ] (print_data): Printing ESTD_12TD.dat
+24/09/13 13:59:21 [INFO    ] (run_es): Running EnergyScope
+24/09/13 13:59:59 [INFO    ] (run_es): End of run
+24/09/13 13:59:59 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Steering_committee\2050
+24/09/13 13:59:59 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/09/13 13:59:59 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/09/13 14:00:05 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/09/13 14:00:05 [INFO    ] (print_data): Printing ESTD_data.dat
+24/09/13 14:00:05 [INFO    ] (print_data): Printing ESTD_12TD.dat
+24/09/13 14:00:05 [INFO    ] (run_es): Running EnergyScope
+24/09/13 14:00:48 [INFO    ] (run_es): End of run
+24/09/13 14:00:48 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Steering_committee\2050
+24/09/13 14:00:48 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/09/13 14:00:48 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/09/13 14:00:53 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/09/13 14:00:53 [INFO    ] (print_data): Printing ESTD_data.dat
+24/09/13 14:00:53 [INFO    ] (print_data): Printing ESTD_12TD.dat
+24/09/13 14:00:53 [INFO    ] (run_es): Running EnergyScope
+24/09/13 14:01:35 [INFO    ] (run_es): End of run
+24/09/13 14:01:35 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Steering_committee\2050
+24/09/13 14:01:35 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/09/13 14:01:35 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/09/13 14:01:41 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/09/13 14:01:41 [INFO    ] (print_data): Printing ESTD_data.dat
+24/09/13 14:01:41 [INFO    ] (print_data): Printing ESTD_12TD.dat
+24/09/13 14:01:41 [INFO    ] (run_es): Running EnergyScope
+24/09/13 14:02:14 [INFO    ] (run_es): End of run
+24/09/13 14:02:14 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Steering_committee\2050
+24/09/13 14:02:14 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/09/13 14:02:14 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/09/13 14:02:19 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/09/13 14:02:19 [INFO    ] (print_data): Printing ESTD_data.dat
+24/09/13 14:02:19 [INFO    ] (print_data): Printing ESTD_12TD.dat
+24/09/13 14:02:19 [INFO    ] (run_es): Running EnergyScope
+24/09/13 14:02:50 [INFO    ] (run_es): End of run

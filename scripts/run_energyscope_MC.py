@@ -12,7 +12,9 @@ output_filename = r"C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/MC
 input_weights = [
     [1.0, 0.0, 0.0, 0.0, 0.0],
     [0.0, 1.0, 0.0, 0.0, 0.0],
-    [0.2, 0.2, 0.2, 0.2, 0.2]
+    [0.0, 0.0, 1.0, 0.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0, 0.0],
+    [0.0, 0.0, 0.0, 0.0, 1.0]
 ]
 
 # DO NOT MODIFY
