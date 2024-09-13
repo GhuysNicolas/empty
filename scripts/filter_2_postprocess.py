@@ -2,7 +2,7 @@ import pandas as pd
 
 # Define file paths
 assets_file_path = r'C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/SC_results_1/output/lca_breakdown.txt'  # Path to your assets file
-selection_file_path = '../../../Desktop/selection.txt'  # Path to your selection list file
+selection_file_path = r'C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/scripts/selection.txt'  # Path to your selection list file
 output_file_path = 'filtered_assets.txt'  # Path to save the filtered data
 
 # Load the assets data into a dataframe
