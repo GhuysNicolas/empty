@@ -1,6 +1,6 @@
 # Case study definition
 # name of the case study. The problem formulation and ouptuts will be printed into the following relative path from main directory : case_studies/config['case_study']
-'case_study': 'test_1'
+'case_study': 'Symp_MC2_lca'
 # number of typical days to consider
 'nbr_td': 12
 # Dictionnary with the dataframes containing all the data in the form : {'Demand': eud, 'Resources': resources, 'Technologies': technologies, 'End_uses_categories': end_uses_categories, 'Layers_in_out': layers_in_out, 'Storage_characteristics': storage_characteristics, 'Storage_eff_in': storage_eff_in, 'Storage_eff_out': storage_eff_out, 'Time_series': time_series, 'Misc': misc}
@@ -19,16 +19,16 @@
 'Crit_3_min': 1000;
 
 'Cost_max': 150000;
-'LCA_max' : 16000;
+'LCA_max' : 49000;
 'Crit_1_max': 700;
 'Crit_2_max': 800000;
 'Crit_3_max': 70000;
 
-'Weight_Cost' : 0;
-'Weight_LCA' : 1.0;
+'Weight_Cost' : 0.5;
+'Weight_LCA' : 0.2;
 'Weight_Crit1' : 0.0;
 'Weight_Crit2' : 0.0;
-'Weight_Crit3' : 0.0;
+'Weight_Crit3' : 0.3;
 
 'Weight_GWP' : 0;
 'GWP_min': 0;

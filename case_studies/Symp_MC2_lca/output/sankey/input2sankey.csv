@@ -1,0 +1,48 @@
+source,target,realValue,layerID,layerColor,layerUnit
+Prod. Ammonia RE,Ammonia,226.17,Ammonia,#000ECD,TWh
+Ammonia,Non-energy demand,10.56,Ammonia,#000ECD,TWh
+Ammonia,Elec,215.61,Ammonia,#000ECD,TWh
+Prod. Methanol RE,Methanol,39.20,Methanol,#CC0066,TWh
+Methanol,Non-energy demand,1.60,Methanol,#CC0066,TWh
+Methanol,MTO,36.48,Methanol,#CC0066,TWh
+Heat HT,MTO,9.70,Heat HT,#DC143C,TWh
+MTO,HVC,29.39,HVC,#00FFFF,TWh
+HVC,Non-energy demand,42.85,HVC,#00FFFF,TWh
+Diesel,Freight,2.74,Diesel,#D3D3D3,TWh
+Gas Prod,Gas sto.,0.00,GAS,#FFD700,TWh
+Gas sto.,Gas,0.00,GAS,#FFD700,TWh
+Gas Prod,Gas,11.63,GAS,#FFD700,TWh
+Gas,Boilers,11.74,GAS,#FFD700,TWh
+Electricity,Elec,0.21,Electricity,#00BFFF,TWh
+Wind,Elec,42.51,Wind,#27AE34,TWh
+Hydro River,Elec,0.49,Hydro River,#0000FF,TWh
+Solar,Elec,61.53,Solar,#FFFF00,TWh
+Waste,Boilers,8.47,Waste,#808000,TWh
+Wet biomass,Biomethanation,38.90,Wood,#CD853F,TWh
+Biomethanation,Gas Prod,11.63,GAS,#FFD700,TWh
+Elec,Mob priv,10.11,Electricity,#00BFFF,TWh
+Elec,Mob public,3.66,Electricity,#00BFFF,TWh
+Elec,Freight,1.42,Electricity,#00BFFF,TWh
+Elec,Exp & Loss,10.11,Electricity,#00BFFF,TWh
+Elec,Elec demand,104.91,Electricity,#00BFFF,TWh
+Wind,Curt.,0.45,Wind,#27AE34,TWh
+Elec,Storage,0.34,Electricity,#00BFFF,TWh
+Storage,Elec demand,0.26,Electricity,#00BFFF,TWh
+Elec,HPs,33.60,Electricity,#00BFFF,TWh
+Elec,HT sto,24.18,Electricity,#00BFFF,TWh
+HT sto,Heat HT,24.08,Heat HT,#DC143C,TWh
+Elec,Heat HT,24.73,Electricity,#00BFFF,TWh
+H2 prod,H2 sto.,0.00,H2,#FF00FF,TWh
+H2 sto.,H2,0.00,H2,#FF00FF,TWh
+H2 prod,H2,0.00,H2,#FF00FF,TWh
+H2,Freight,15.57,H2,#FF00FF,TWh
+HPs,Dec. sto,9.92,Heat LT,#FA8072,TWh
+HPs,Heat LT Dec,62.97,Heat LT,#FA8072,TWh
+HPs,DHN,45.03,Heat LT,#FA8072,TWh
+Dec. sto,Heat LT Dec,9.31,Heat LT,#FA8072,TWh
+Boilers,Heat HT,17.83,Heat HT,#DC143C,TWh
+DHN,Heat LT DHN,36.65,Heat LT,#FA8072,TWh
+DHN,Loss DHN,2.25,Heat LT,#FA8072,TWh
+DHN,DHN Sto,6.14,Heat LT,#FA8072,TWh
+DHN Sto,Heat LT DHN,5.80,Heat LT,#FA8072,TWh
+Heat HT,Ind Heat Demand,56.71,Heat HT,#DC143C,TWh

@@ -1,0 +1,31 @@
+source,target,realValue,layerID,layerColor,layerUnit
+Prod. Ammonia RE,Ammonia,371.27,Ammonia,#000ECD,TWh
+Ammonia,Non-energy demand,10.56,Ammonia,#000ECD,TWh
+Ammonia,Elec,360.71,Ammonia,#000ECD,TWh
+Prod. Methanol RE,Methanol,54.78,Methanol,#CC0066,TWh
+Methanol,Non-energy demand,1.60,Methanol,#CC0066,TWh
+Methanol,MTO,53.19,Methanol,#CC0066,TWh
+Heat HT,MTO,14.14,Heat HT,#DC143C,TWh
+MTO,HVC,42.85,HVC,#00FFFF,TWh
+HVC,Non-energy demand,42.85,HVC,#00FFFF,TWh
+Diesel,Mob public,2.78,Diesel,#D3D3D3,TWh
+Diesel,Freight,22.39,Diesel,#D3D3D3,TWh
+Gas Prod,Gas,77.20,GAS,#FFD700,TWh
+Gas,Mob priv,24.80,GAS,#FFD700,TWh
+Gas,Boilers,57.64,GAS,#FFD700,TWh
+Elec,Mob public,3.66,Electricity,#00BFFF,TWh
+Elec,Freight,1.42,Electricity,#00BFFF,TWh
+Elec,Exp & Loss,8.68,Electricity,#00BFFF,TWh
+Elec,Elec demand,105.17,Electricity,#00BFFF,TWh
+Elec,HPs,27.85,Electricity,#00BFFF,TWh
+Elec,Heat HT,17.89,Electricity,#00BFFF,TWh
+H2,Gas Prod,92.64,H2,#FF00FF,TWh
+HPs,Dec. sto,1.88,Heat LT,#FA8072,TWh
+HPs,Heat LT Dec,70.46,Heat LT,#FA8072,TWh
+HPs,DHN,21.43,Heat LT,#FA8072,TWh
+Dec. sto,Heat LT Dec,1.82,Heat LT,#FA8072,TWh
+Boilers,DHN,0.48,Heat LT,#FA8072,TWh
+Boilers,Heat HT,52.96,Heat HT,#DC143C,TWh
+DHN,Heat LT DHN,42.45,Heat LT,#FA8072,TWh
+DHN,Loss DHN,2.23,Heat LT,#FA8072,TWh
+Heat HT,Ind Heat Demand,56.71,Heat HT,#DC143C,TWh

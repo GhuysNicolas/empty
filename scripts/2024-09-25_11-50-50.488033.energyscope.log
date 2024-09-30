@@ -1,0 +1,9 @@
+24/09/25 11:50:51 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Steering_committee\2050
+24/09/25 11:50:51 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/09/25 11:50:51 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/09/25 11:50:56 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/09/25 11:50:56 [INFO    ] (print_data): Printing ESTD_data.dat
+24/09/25 11:50:56 [INFO    ] (print_data): Printing ESTD_12TD.dat
+24/09/25 11:50:56 [INFO    ] (run_es): Running EnergyScope
+24/09/25 11:51:40 [INFO    ] (run_es): End of run
+24/09/25 11:51:40 [INFO    ] (read_outputs): Reading outputs from: c:\users\ghuysn\git_projects\energyscope_lca\case_studies\Symp_MC2_lca\output
