@@ -195,16 +195,24 @@ def kmedoid_clustering(config, n_data, weights):
     print_dat(data_path, n_data, weights, nbr_td)
 
     # define options
-    cplex_options = ['mipdisplay=5',
-                     'mipinterval=1000',
-                     'mipgap=1e-6']
-    cplex_options_str = ' '.join(cplex_options)
+
+    #cplex_options = ['mipdisplay=5',
+    #                 'mipinterval=1000',
+    #                 'mipgap=1e-6']
+
+    gurobi_options = ['MIPFocus=1',  # Focus on improving MIP performance (1=feasibility, 2=optimality)
+                  'MIPGap=1e-6',  # Tolerance for MIP gap
+                  'TimeLimit=1000',  # Limit solver runtime to 1 hour
+                  ]
+
+    gurobi_options_str = ' '.join(gurobi_options) #change with cplex if needed
+
     options = {'show_stats': 3,
                'log_file': str(log_file),
                'times': 1,
                'gentimes': 1,
-               'solver': 'cplex',
-               'cplex_options': cplex_options_str}
+               'solver': 'gurobi', #change with cplex if needed
+               'cplex_options': gurobi_options_str} #change with cplex if needed
 
     # using AMPL_path if specified. Otherwise, we assume ampl is in environment variables
     if config['AMPL_path'] is None:

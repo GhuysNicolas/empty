@@ -8,18 +8,22 @@
 ################################################################################
 
 # Load model
-model "C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\td_main.mod";
+model "c:\users\ghuysn\git_projects\energyscope_lca\case_studies\2035_CS2\es_model.mod";
 
 # Load data
-data "C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat";
+data "c:\users\ghuysn\git_projects\energyscope_lca\case_studies\2035_CS2\ESTD_data.dat";
+data "c:\users\ghuysn\git_projects\energyscope_lca\case_studies\2035_CS2\ESTD_12TD.dat";
 
 # Run options
 option show_stats "3";
-option log_file "C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\log.txt";
-option times "1";
-option gentimes "1";
+option log_file "C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\case_studies\2035_CS2\output\log.txt";
+option presolve "10";
+option presolve_eps "1e-7";
+option presolve_fixeps "1e-7";
+option show_boundtol "0";
+option _log_input_only "False";
 option solver "gurobi";
-option cplex_options "MIPFocus=1 MIPGap=1e-6 TimeLimit=1000";
+option gurobi_options "predual=-1 method=2 crossover=0 prepasses=3 barconvtol=1e-6 presolve=-1";
 
 # Solve
 solve;
@@ -34,7 +38,7 @@ display _solve_elapsed_time;
 
 
 # Saving sets and parameters to output file
-param PathName symbolic := "C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection";
+param PathName symbolic := "c:\users\ghuysn\git_projects\energyscope_lca\case_studies\2035_CS2\output";
 
 if solve_result = "limit" then { # To avoid post treatment error
     print "TIME OUT";
@@ -51,7 +55,8 @@ else {
             exit 1;
         }
         else {
-			include "printing_outputs.run";
+			include "c:\users\ghuysn\git_projects\energyscope_lca\energyscope\energy_model\run\print_year_summary.run";
+			include "c:\users\ghuysn\git_projects\energyscope_lca\energyscope\energy_model\run\print_sankey.run";
 			exit 0;
 		}
 	}
