@@ -1,0 +1,35 @@
+
+Presolve eliminates 651952 constraints and 420024 variables.
+"option presolve 10;" used, but "option presolve 11;" might work better.
+Adjusted problem:
+275189 variables, all linear
+502372 constraints, all linear; 1630180 nonzeros
+	355076 equality constraints
+	147296 inequality constraints
+1 linear objective; 1 nonzero.
+
+presolve results:
+	variables omitted:	420024
+	constraints omitted:	651952
+	ranges relaxed:		180400
+	bounds improved:	419522
+	constraint_drop_tol breakpoints: 0, 0, 0.6600454822182655
+	nba cycles:		9
+	bound row scans:	1690464
+	row-scan updates:	766302
+Gurobi 11.0.3:   pre:dual = -1
+  alg:method = 2
+  bar:crossover = 0
+  pre:passes = 3
+  bar:convtol = 1e-06
+  pre:solve = -1
+Gurobi 11.0.3: terminated due to unrecoverable numerical issues
+0 simplex iterations
+97 barrier iterations
+solve_result = failure
+
+solve_result_num = 550
+
+_solve_elapsed_time = 25.5
+
+FAILURE

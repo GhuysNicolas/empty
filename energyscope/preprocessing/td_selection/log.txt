@@ -1,14 +1,14 @@
 #				incremental	total
 #phase		seconds		memory		memory
-#execute	0		6240776		6240776
+#execute	0		6240664		6240664
 ### td_main.run:20(910)   option ...
-#execute	0		0		6240776
+#execute	0		0		6240664
 ### td_main.run:21(931)   option ...
-#execute	0		0		6240776
+#execute	0		0		6240664
 ### td_main.run:22(955)   option ...
-#execute	0		0		6240776
+#execute	0		0		6240664
 ### td_main.run:25(1026)   solve ...
-#compile	0		1560		6242336
+#compile	0		1560		6242224
 ##genmod times:
 ##seq      seconds    cum. sec.    mem. inc.  name
 ## 89            0            0            0  derstage
@@ -17,16 +17,16 @@
 ## 108            0            0            0  DAYS
 ## 109            0            0            0  Nbr_TD
 ## 110            0            0            0  Ndata
-## 111     0.171875     0.171875     13175008  Distance
-## 112            0     0.171875            0  Selected_TD
-## 114            0     0.171875      4202528  Cluster_matrix
-## 116            0     0.171875      3233312  allocate_1TD_per_day
-## 118            0     0.171875     14759016  other_TD_null
-## 120            0     0.171875        38400  limit_number_of_TD
-## 122            0     0.171875      3187200  Euclidean_distance
-#genmod		0.171875	38595464	44837800
-#merge		0		2097160		46934960
-#collect	0.015625	37953104	84888064
+## 111        0.375        0.375     13175008  Distance
+## 112            0        0.375            0  Selected_TD
+## 114            0        0.375      4202528  Cluster_matrix
+## 116            0        0.375      3233312  allocate_1TD_per_day
+## 118            0        0.375     14759016  other_TD_null
+## 120            0        0.375        38400  limit_number_of_TD
+## 122            0        0.375      3187200  Euclidean_distance
+#genmod		0.375		38595464	44837688
+#merge		0		2097160		46934848
+#collect	0		37953104	84887952
 
 "option presolve 10;" used, but "option presolve 2;" would suffice.
 133590 variables, all binary
@@ -43,19 +43,19 @@ presolve results:
 	nba cycles:		1
 	bound row scans:	133591
 	row-scan updates:	0
-#presolve	0.015625	30571568	115459632
-#output		0.015625	4194312		119653944
-#Total		0.21875
+#presolve	0.015625	30571568	115459520
+#output		0.046875	4194312		119653832
+#Total		0.4375
 Gurobi 11.0.3: Gurobi 11.0.3: optimal solution; objective 2.388570613e-05
 0 simplex iterations
 1 branching node
 absmipgap=2.65616e-10, relmipgap=1.11203e-05
-#execute	0		2097160		121751104
+#execute	0		2097160		121750992
 ### td_main.run:27(1034)   option ...
 ### td_main.run:28(1062)   option ...
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 1.531
+_solve_elapsed_time = 1.359
 

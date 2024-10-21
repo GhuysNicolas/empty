@@ -194,9 +194,9 @@ let weight_gwp := 0.0;
 # New objectives weights #
 let weight_cost := 1.0;
 let weight_lca := 0.0;
-let weight_crit_1 := 0.00;
-let weight_crit_2 := 0.00;
-let weight_crit_3 := 0.00;
+let weight_crit_1 := 0.0;
+let weight_crit_2 := 0.0;
+let weight_crit_3 := 0.0;
 
 
 # Criterias normalization setup (min and max obtain with single criterion optimisation): crit_normalised = (crit - crit_min) / (crit_max - crit_min)
@@ -402,7 +402,8 @@ subject to gwp_op_calc {i in RESOURCES}:
 # ---------
 # [Eq. 1000.1]
 subject to totalLCA_calc:
-	TotalLCA = sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]) + sum {i in RESOURCES} LCA_res [i] + sum {j in TECHNOLOGIES} LCA_op [j];
+	#TotalLCA = sum {j in TECHNOLOGIES} (LCA_tech [j] / lifetime [j]) + sum {i in RESOURCES} LCA_res [i] + sum {j in TECHNOLOGIES} LCA_op [j];
+	TotalLCA = sum {i in RESOURCES} LCA_res [i] + sum {j in TECHNOLOGIES} LCA_op [j];
 
 # [Eq. 1000.2]
 subject to lca_tech_calc {j in TECHNOLOGIES}:

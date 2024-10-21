@@ -1,0 +1,5 @@
+24/10/21 14:26:11 [INFO    ] (import_data): Importing data files from C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\Data\Anne_CS_21_10\2030
+24/10/21 14:26:11 [INFO    ] (kmedoid_clustering): Starting kmedoid clustering of typical days based on C:\Users\ghuysn\GIT_Projects\EnergyScope_LCA\energyscope\preprocessing\td_selection\data.dat
+24/10/21 14:26:11 [INFO    ] (kmedoid_clustering): Running kmedoid clustering
+24/10/21 14:26:13 [INFO    ] (kmedoid_clustering): End of kmedoid clustering
+24/10/21 14:26:13 [INFO    ] (print_data): Printing ESTD_data.dat
