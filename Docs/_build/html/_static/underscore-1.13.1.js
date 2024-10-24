@@ -945,7 +945,7 @@
   }
 
   // Traverses the children of `obj` along `path`. If a child is a function, it
-  // is invoked with its parent as context. Returns the value of the final
+  // is invoked with its parent as context. Returns the value of the final_v5
   // child, or `fallback` if any child is undefined.
   function result(obj, path, fallback) {
     path = toPath(path);

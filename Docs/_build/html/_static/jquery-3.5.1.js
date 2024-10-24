@@ -2561,13 +2561,13 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 			if ( postFinder || preFilter ) {
 				if ( postFinder ) {
 
-					// Get the final matcherOut by condensing this intermediate into postFinder contexts
+					// Get the final_v5 matcherOut by condensing this intermediate into postFinder contexts
 					temp = [];
 					i = matcherOut.length;
 					while ( i-- ) {
 						if ( ( elem = matcherOut[ i ] ) ) {
 
-							// Restore matcherIn since elem is not yet a final match
+							// Restore matcherIn since elem is not yet a final_v5 match
 							temp.push( ( matcherIn[ i ] = elem ) );
 						}
 					}
@@ -3691,7 +3691,7 @@ jQuery.extend( {
 		var tuples = [
 
 				// action, add listener, callbacks,
-				// ... .then handlers, argument index, [final state]
+				// ... .then handlers, argument index, [final_v5 state]
 				[ "notify", "progress", jQuery.Callbacks( "memory" ),
 					jQuery.Callbacks( "memory" ), 2 ],
 				[ "resolve", "done", jQuery.Callbacks( "once memory" ),
@@ -7470,7 +7470,7 @@ function defaultPrefilter( elem, props, opts ) {
 
 			/* eslint-enable no-loop-func */
 
-				// The final step of a "hide" animation is actually hiding the element
+				// The final_v5 step of a "hide" animation is actually hiding the element
 				if ( !hidden ) {
 					showHide( [ elem ] );
 				}
@@ -7565,7 +7565,7 @@ function Animation( elem, properties, options ) {
 				return remaining;
 			}
 
-			// If this was an empty animation, synthesize a final progress notification
+			// If this was an empty animation, synthesize a final_v5 progress notification
 			if ( !length ) {
 				deferred.notifyWith( elem, [ animation, 1, 0 ] );
 			}
@@ -9405,7 +9405,7 @@ jQuery.extend( {
 			// uncached part of the url
 			uncached,
 
-			// Create the final options object
+			// Create the final_v5 options object
 			s = jQuery.ajaxSetup( {}, options ),
 
 			// Callbacks context
