@@ -17,14 +17,14 @@
 ## 108            0            0            0  DAYS
 ## 109            0            0            0  Nbr_TD
 ## 110            0            0            0  Ndata
-## 111     0.328125     0.328125     13175008  Distance
-## 112            0     0.328125            0  Selected_TD
-## 114            0     0.328125      4202528  Cluster_matrix
-## 116            0     0.328125      3233312  allocate_1TD_per_day
-## 118            0     0.328125     14759016  other_TD_null
-## 120            0     0.328125        38400  limit_number_of_TD
-## 122            0     0.328125      3187200  Euclidean_distance
-#genmod		0.328125	38595464	44837688
+## 111     0.421875     0.421875     13175008  Distance
+## 112            0     0.421875            0  Selected_TD
+## 114            0     0.421875      4202528  Cluster_matrix
+## 116            0     0.421875      3233312  allocate_1TD_per_day
+## 118            0     0.421875     14759016  other_TD_null
+## 120            0     0.421875        38400  limit_number_of_TD
+## 122            0     0.421875      3187200  Euclidean_distance
+#genmod		0.421875	38595464	44837688
 #merge		0		2097160		46934848
 #collect	0		37953104	84887952
 
@@ -43,13 +43,13 @@ presolve results:
 	nba cycles:		1
 	bound row scans:	133591
 	row-scan updates:	0
-#presolve	0.046875	30571568	115459520
-#output		0.03125		4194312		119653832
-#Total		0.40625
+#presolve	0.03125		30571568	115459520
+#output		0.0625		4194312		119653832
+#Total		0.515625
 CPLEX 22.1.1:   tech:mipdisplay = 5
   tech:mipinterval = 1000
   mip:gap = 1e-06
-CPLEX 22.1.1: optimal solution; objective 7.444441387e-06
+CPLEX 22.1.1: optimal solution; objective 7.419618777e-06
 14 simplex iterations
 #execute	0		2097160		121750992
 ### td_main.run:27(1037)   option ...
@@ -58,5 +58,5 @@ solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 3.969
+_solve_elapsed_time = 5.485
 

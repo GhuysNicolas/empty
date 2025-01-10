@@ -15,7 +15,7 @@ presolve results:
 	bounds improved:	419090
 	constraint_drop_tol breakpoints: 0, 0, 0.6601678861989058
 	nba cycles:		9
-	bound row scans:	1813743
+	bound row scans:	1813744
 	row-scan updates:	863276
 Gurobi 11.0.3:   pre:dual = -1
   alg:method = 2
@@ -23,31 +23,31 @@ Gurobi 11.0.3:   pre:dual = -1
   pre:passes = 3
   bar:convtol = 1e-06
   pre:solve = -1
-Gurobi 11.0.3: optimal solution; objective 23763.98188
+Gurobi 11.0.3: optimal solution; objective 23612.34263
 0 simplex iterations
-151 barrier iterations
+128 barrier iterations
  
 ------------ WARNINGS ------------
 WARNING:  "Tolerance violations"
   Type                         MaxAbs [Name]   MaxRel [Name]
-* variable bounds              5E-06           -             
-* algebraic con(s)             2E-03           -             
+* variable bounds              3E-05           -             
+* algebraic con(s)             5E-03           -             
 *: Using the solver's aux variable values.
 Documentation: mp.ampl.com/modeling-tools.html#automatic-solution-check.
 solve_result = solved
 
 solve_result_num = 0
 
-_solve_elapsed_time = 40.609
+_solve_elapsed_time = 40.046
 
-TotalCost 43.2695746321628
-LCA_tot 42.00000000079192
-Crit_1_tot 198.7809511195696
-Crit_2_tot 454134.4401605458
-Crit_3_tot 22734.50186082127
-LCA_cstr 7.171291572776276
-LCA_op 47.56022285900924
-LCA_res -12.731514430993572
+TotalCost 43.05727968248235
+LCA_tot 42.000000003104766
+Crit_1_tot 196.4500557087273
+Crit_2_tot 483757.0624258545
+Crit_3_tot 40500.67913392092
+LCA_cstr 7.1494712422752364
+LCA_op 45.36201670901726
+LCA_res -10.511487948187737
 --------------SAVING COSTS -----------
 --------------SAVING RESOURCES -----------
 --------------SAVING GWP -----------

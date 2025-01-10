@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Dec  6 22:26:29 2020
+Created on Sun Dec  6 22:26:29 2020_old
 
 Contains functions to read data in csv files and print it with AMPL syntax in ESTD_data.dat
 Also contains functions to analyse input data

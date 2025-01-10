@@ -9,7 +9,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2020-05-04T22:49Z
+ * Date: 2020_old-05-04T22:49Z
  */
 ( function( global, factory ) {
 
@@ -525,7 +525,7 @@ var Sizzle =
  * Released under the MIT license
  * https://js.foundation/
  *
- * Date: 2020-03-14
+ * Date: 2020_old-03-14
  */
 ( function( window ) {
 var i,
@@ -1376,7 +1376,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// Support: Firefox <=3.6 - 5 only
-			// Old Firefox doesn't throw on a badly-escaped identifier.
+			// Intermediate Firefox doesn't throw on a badly-escaped identifier.
 			el.querySelectorAll( "\\\f" );
 			rbuggyQSA.push( "[\\r\\n\\f]" );
 		} );

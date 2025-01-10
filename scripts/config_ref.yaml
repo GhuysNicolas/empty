@@ -1,6 +1,11 @@
 # Case study definition
 # name of the case study. The problem formulation and ouptuts will be printed into the following relative path from main directory : case_studies/config['case_study']
-'case_study': 'Anne_CS_22_10/final_v5/v5_2035_woodmin'
+'case_study': 'ARTICLE_PB-LCA/START/CS_1'
+#'case_study': 'Anne_CS_22_11/SA_26_11_24/2025'
+'data_dir': 'Data/FINAL_CS_ANNE/SA_FINAL_26_11_24/2040' # Folders containing the csv data files
+#'data_dir': 'Data/FEDECOM/CH_10'  # Folders containing the csv data files
+'LCA_max' : 100000; #2015 : 115000 / #2020 : 91000 / 2025 : 72000 / 2030 : 56000 / 2035 : 42000  / 2040 : 29000 / 2045 : 20000 / 2050 : 14000
+'Cost_max': 300000;
 # number of typical days to consider
 'nbr_td': 12
 # Dictionnary with the dataframes containing all the data in the form : {'Demand': eud, 'Resources': resources, 'Technologies': technologies, 'End_uses_categories': end_uses_categories, 'Layers_in_out': layers_in_out, 'Storage_characteristics': storage_characteristics, 'Storage_eff_in': storage_eff_in, 'Storage_eff_out': storage_eff_out, 'Time_series': time_series, 'Misc': misc}
@@ -12,19 +17,17 @@
 
 ##### MC parameters ####
 
-'Cost_min': 10000;
+'Cost_min': 1000;
 'LCA_min' : 1000;
 'Crit_1_min': 1;
 'Crit_2_min': 1;
 'Crit_3_min': 1;
 
-'Cost_max': 150000;
-'LCA_max' : 42000; #2020 : 91000 / 2025 : 72000 / 2030 : 56000 / 2035 : 42000 / 2040 : 29000 / 2045 : 20000 / 2050 : 14000
-'Crit_1_max': 1000000;
-'Crit_2_max': 1000000;
-'Crit_3_max': 1000000;
+'Crit_1_max': 100000000;
+'Crit_2_max': 100000000;
+'Crit_3_max': 100000000;
 
-'Weight_Cost' : 1.00;
+'Weight_Cost' : 1.0;
 'Weight_LCA' : 0.0;
 'Weight_Crit1' : 0.0;
 'Weight_Crit2' : 0.0;
@@ -32,10 +35,10 @@
 
 'Weight_GWP' : 0;
 'GWP_min': 0;
-'GWP_max': 10000000;
+'GWP_max': 1000000000;
 
 # Relative path from main directory to energyscope subdirectories and files
-'data_dir': 'Data/FINAL_CS_ANNE/Anne_CS_verified_v5/2035_woodmin'  # Folders containing the csv data files
+
 'es_path': 'energyscope/energy_model'  # Path to the energy model (.mod and .run files)
 'cs_path': 'case_studies' # Path to the directory containing the different case studies
 'step1_path': 'energyscope/preprocessing/td_selection' # Path to the step1 selection of typical days

@@ -222,7 +222,7 @@ def kmedoid_clustering(config, n_data, weights):
               print_files=['printing_outputs.run'])
 
     os.chdir(step1_path)
-    # running ES
+    # running ES_old
     logging.info('Running kmedoid clustering')
 
     try:

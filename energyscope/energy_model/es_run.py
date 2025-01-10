@@ -59,7 +59,7 @@ def run_es(config):
               print_files=print_files)
 
     os.chdir((cs / config['case_study']))
-    # running ES
+    # running ES_old
     logging.info('Running EnergyScope')
 
     try:

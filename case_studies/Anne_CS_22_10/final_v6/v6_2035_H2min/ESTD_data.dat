@@ -116,7 +116,7 @@
  param  crit_3_max  :=  1000000;;  #  crit_3_max  [GWh/year]:  maximum  GWh  invested 
  param  weight_lca  :=  0.0;;  #  Weight_lca  [GWh/year]:  maximum  GWh  invested 
  param  weight_gwp  :=  0;;  #  Weight_gwp  [GWh/year]:  maximum  GWh  invested 
- param  weight_cost  :=  1.00;;  #  Weight_cost  [GWh/year]:  maximum  GWh  invested 
+ param  weight_cost  :=  1;;  #  Weight_cost  [GWh/year]:  maximum  GWh  invested 
  param  weight_crit_1  :=  0.0;;  #  Weight_crit1  [GWh/year]:  maximum  GWh  invested 
  param  weight_crit_2  :=  0.0;;  #  Weight_crit2  [GWh/year]:  maximum  GWh  invested 
  param  weight_crit_3  :=  0.0;;  #  Weight_crit3  [GWh/year]:  maximum  GWh  invested 
@@ -442,7 +442,7 @@ GAS_RE_IMPORT	Infinity	0.0	0.1429	0.000847631	4.42823733	0.856286567	-0.11605233
 GASOLINE	Infinity	0.3448	0.065566486	0.000622883	0.632933753	0.009639469	0.050111236
 H2	Infinity	0.36380236	0.0743	0.000291273	0.464020961	0.036250089	0.394630338
 H2_RE_BE	0.0	0.0	0.171615477	0.0	0.0	0.0	0.0
-H2_RE_IMPORT	Infinity	0.0	0.772	0.000595491	4.004857126	0.780650265	0.074861406
+H2_RE_IMPORT	Infinity	0.0	0.0772	0.000595491	4.004857126	0.780650265	0.074861406
 LFO	Infinity	0.3115	0.047882136	0.000495685	0.601887565	0.008719785	0.037165842
 LFO_RE_BE	0.0	0.2	0.095764273	0.0	0.0	0.0	0.0
 METHANOL	Infinity	0.35	0.034	0.00029833	0.299434257	0.030310338	0.075281625
