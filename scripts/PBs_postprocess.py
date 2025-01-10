@@ -1,7 +1,9 @@
 import pandas as pd
 
 # Define file paths
-def postprocess_LCA(path_BD : path_to_lca_BD, path_LCIA : ):
+def postprocess_LCA(path_BD : path_to_lca_breakdown, path_LCIA : path_to_LCIA ):
+        LCIA = path_LCIA
+        LCA_BD = path_BD
 
     return path_BD
 

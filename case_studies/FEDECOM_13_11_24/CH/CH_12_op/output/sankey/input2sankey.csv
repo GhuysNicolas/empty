@@ -1,0 +1,47 @@
+source,target,realValue,layerID,layerColor,layerUnit
+Ammonia,Non-energy demand,0.08,Ammonia,#000ECD,TWh
+H2,Haber-Bosch,0.09,H2,#FF00FF,TWh
+Elec,Haber-Bosch,0.01,Electricity,#00BFFF,TWh
+Haber-Bosch,DHN,0.01,DHN,#FA8072,TWh
+Haber-Bosch,Ammonia,0.08,Ammonia,#000ECD,TWh
+Gas,Methane-to-Methanol,1.73,Gas,#FFD700,TWh
+Methane-to-Methanol,Methanol,1.13,Methanol,#CC0066,TWh
+Methanol,Non-energy demand,0.05,Methanol,#CC0066,TWh
+Methanol,MTO,1.08,Methanol,#CC0066,TWh
+Heat HT,MTO,0.29,Heat HT,#DC143C,TWh
+MTO,HVC,0.87,HVC,#00FFFF,TWh
+HVC,Non-energy demand,0.87,HVC,#00FFFF,TWh
+Gas Prod,Gas sto.,0.00,GAS,#FFD700,TWh
+Gas sto.,Gas,0.00,GAS,#FFD700,TWh
+Gas Prod,Gas,1.73,GAS,#FFD700,TWh
+Uranium,Elec,39.73,Nuclear,#FFC0CB,TWh
+Hydro River,Elec,16.11,Hydro River,#0000FF,TWh
+Coal,Boilers,26.82,Coal,#A0522D,TWh
+Wet biomass,Biomethanation,5.80,Wood,#CD853F,TWh
+Biomethanation,Gas Prod,1.73,GAS,#FFD700,TWh
+Elec,Mob priv,25.17,Electricity,#00BFFF,TWh
+Elec,Freight,0.71,Electricity,#00BFFF,TWh
+Elec,Exp & Loss,5.01,Electricity,#00BFFF,TWh
+Elec,Elec demand,27.65,Electricity,#00BFFF,TWh
+Elec,Storage,9.06,Electricity,#00BFFF,TWh
+Storage,Elec demand,8.96,Electricity,#00BFFF,TWh
+Elec,HPs,19.06,Electricity,#00BFFF,TWh
+Elec,Heat LT Dec,1.75,Electricity,#00BFFF,TWh
+Elec,Electrolyser,15.19,Electricity,#00BFFF,TWh
+Heat HT,Electrolyser,2.68,Heat HT,#DC143C,TWh
+Electrolyser,H2 prod,14.11,Electricity,#00BFFF,TWh
+Electrolyser,DHN,0.27,Heat LT,#FA8072,TWh
+H2 prod,H2 sto.,0.00,H2,#FF00FF,TWh
+H2 sto.,H2,0.00,H2,#FF00FF,TWh
+H2 prod,H2,14.11,H2,#FF00FF,TWh
+H2,Freight,14.03,H2,#FF00FF,TWh
+HPs,Dec. sto,10.85,Heat LT,#FA8072,TWh
+HPs,Heat LT Dec,30.88,Heat LT,#FA8072,TWh
+HPs,DHN,19.12,Heat LT,#FA8072,TWh
+Dec. sto,Heat LT Dec,10.09,Heat LT,#FA8072,TWh
+Boilers,Heat HT,21.99,Heat HT,#DC143C,TWh
+DHN,Heat LT DHN,13.35,Heat LT,#FA8072,TWh
+DHN,Loss DHN,0.97,Heat LT,#FA8072,TWh
+DHN,DHN Sto,5.09,Heat LT,#FA8072,TWh
+DHN Sto,Heat LT DHN,4.96,Heat LT,#FA8072,TWh
+Heat HT,Ind Heat Demand,19.02,Heat HT,#DC143C,TWh

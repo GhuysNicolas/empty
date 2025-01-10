@@ -1,0 +1,49 @@
+source,target,realValue,layerID,layerColor,layerUnit
+Imp. Ammonia RE,Ammonia,3.43,Ammonia,#000ECD,TWh
+Ammonia,Non-energy demand,9.42,Ammonia,#000ECD,TWh
+H2,Haber-Bosch,6.77,H2,#FF00FF,TWh
+Elec,Haber-Bosch,0.73,Electricity,#00BFFF,TWh
+Haber-Bosch,DHN,0.80,DHN,#FA8072,TWh
+Haber-Bosch,Ammonia,5.99,Ammonia,#000ECD,TWh
+Gas,Methane-to-Methanol,74.57,Gas,#FFD700,TWh
+Methane-to-Methanol,Methanol,48.77,Methanol,#CC0066,TWh
+Methanol,Non-energy demand,1.42,Methanol,#CC0066,TWh
+Methanol,MTO,47.35,Methanol,#CC0066,TWh
+Heat HT,MTO,12.59,Heat HT,#DC143C,TWh
+MTO,HVC,38.15,HVC,#00FFFF,TWh
+HVC,Non-energy demand,38.15,HVC,#00FFFF,TWh
+Imp. Gas,Gas,64.17,Gas,#FFD700,TWh
+Gas Prod,Gas,12.32,GAS,#FFD700,TWh
+Gas,Freight,1.92,GAS,#FFD700,TWh
+Electricity,Elec,3.38,Electricity,#00BFFF,TWh
+Wind,Elec,90.23,Wind,#27AE34,TWh
+Hydro River,Elec,21.16,Hydro River,#0000FF,TWh
+Solar,Elec,320.78,Solar,#FFFF00,TWh
+Wood,H2 prod,99.91,Wood,#CD853F,TWh
+Wood be.,Wood,99.91,Wood,#CD853F,TWh
+Wet biomass,Biomethanation,41.21,Wood,#CD853F,TWh
+Biomethanation,Gas Prod,12.32,GAS,#FFD700,TWh
+Elec,Mob priv,113.91,Electricity,#00BFFF,TWh
+Elec,Freight,5.34,Electricity,#00BFFF,TWh
+Elec,Exp & Loss,28.43,Electricity,#00BFFF,TWh
+Elec,Elec demand,-8.24,Electricity,#00BFFF,TWh
+Wind,Curt.,54.59,Wind,#27AE34,TWh
+Elec,Storage,139.53,Electricity,#00BFFF,TWh
+Storage,Elec demand,138.12,Electricity,#00BFFF,TWh
+Elec,HPs,83.88,Electricity,#00BFFF,TWh
+Elec,Heat HT,160.04,Electricity,#00BFFF,TWh
+Elec,Electrolyser,67.09,Electricity,#00BFFF,TWh
+Heat HT,Electrolyser,11.84,Heat HT,#DC143C,TWh
+Electrolyser,H2 prod,62.35,Electricity,#00BFFF,TWh
+Electrolyser,DHN,1.18,Heat LT,#FA8072,TWh
+H2 prod,H2,105.32,H2,#FF00FF,TWh
+H2,Freight,98.55,H2,#FF00FF,TWh
+HPs,Dec. sto,46.45,Heat LT,#FA8072,TWh
+HPs,Heat LT Dec,139.61,Heat LT,#FA8072,TWh
+HPs,DHN,80.95,Heat LT,#FA8072,TWh
+Dec. sto,Heat LT Dec,43.26,Heat LT,#FA8072,TWh
+DHN,Heat LT DHN,56.11,Heat LT,#FA8072,TWh
+DHN,Loss DHN,4.15,Heat LT,#FA8072,TWh
+DHN,DHN Sto,22.67,Heat LT,#FA8072,TWh
+DHN Sto,Heat LT DHN,22.26,Heat LT,#FA8072,TWh
+Heat HT,Ind Heat Demand,135.61,Heat HT,#DC143C,TWh

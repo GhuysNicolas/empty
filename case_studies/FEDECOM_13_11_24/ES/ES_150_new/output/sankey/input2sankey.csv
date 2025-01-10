@@ -1,0 +1,48 @@
+source,target,realValue,layerID,layerColor,layerUnit
+Ammonia,Non-energy demand,9.42,Ammonia,#000ECD,TWh
+H2,Haber-Bosch,10.65,H2,#FF00FF,TWh
+Elec,Haber-Bosch,1.15,Electricity,#00BFFF,TWh
+Haber-Bosch,DHN,1.26,DHN,#FA8072,TWh
+Haber-Bosch,Ammonia,9.42,Ammonia,#000ECD,TWh
+Imp. Methanol,Methanol,178.54,Methanol,#CC0066,TWh
+Methanol,Non-energy demand,1.42,Methanol,#CC0066,TWh
+Methanol,Freight,255.72,Methanol,#CC0066,TWh
+Methanol,MTO,47.35,Methanol,#CC0066,TWh
+Heat HT,MTO,12.59,Heat HT,#DC143C,TWh
+MTO,HVC,38.15,HVC,#00FFFF,TWh
+HVC,Non-energy demand,38.15,HVC,#00FFFF,TWh
+Gas Prod,Gas sto.,6.64,GAS,#FFD700,TWh
+Gas sto.,Gas,6.50,GAS,#FFD700,TWh
+Gas Prod,Gas,5.68,GAS,#FFD700,TWh
+Gas,Boilers,12.22,GAS,#FFD700,TWh
+Wind,Elec,275.83,Wind,#27AE34,TWh
+Coal,Boilers,35.00,Coal,#A0522D,TWh
+Solar,Elec,92.28,Solar,#FFFF00,TWh
+Waste,Boilers,38.20,Waste,#808000,TWh
+Wet biomass,Biomethanation,41.21,Wood,#CD853F,TWh
+Biomethanation,Gas Prod,12.32,GAS,#FFD700,TWh
+Elec,Mob priv,113.91,Electricity,#00BFFF,TWh
+Elec,Freight,5.34,Electricity,#00BFFF,TWh
+Elec,Exp & Loss,21.69,Electricity,#00BFFF,TWh
+Elec,Elec demand,83.24,Electricity,#00BFFF,TWh
+Elec,Storage,47.12,Electricity,#00BFFF,TWh
+Storage,Elec demand,46.64,Electricity,#00BFFF,TWh
+Elec,HPs,84.43,Electricity,#00BFFF,TWh
+Elec,Heat HT,78.86,Electricity,#00BFFF,TWh
+Elec,Electrolyser,11.46,Electricity,#00BFFF,TWh
+Heat HT,Electrolyser,2.02,Heat HT,#DC143C,TWh
+Electrolyser,H2 prod,10.65,Electricity,#00BFFF,TWh
+Electrolyser,DHN,0.20,Heat LT,#FA8072,TWh
+H2 prod,H2 sto.,0.00,H2,#FF00FF,TWh
+H2 sto.,H2,0.00,H2,#FF00FF,TWh
+H2 prod,H2,10.65,H2,#FF00FF,TWh
+HPs,Dec. sto,46.00,Heat LT,#FA8072,TWh
+HPs,Heat LT Dec,140.12,Heat LT,#FA8072,TWh
+HPs,DHN,83.05,Heat LT,#FA8072,TWh
+Dec. sto,Heat LT Dec,42.76,Heat LT,#FA8072,TWh
+Boilers,Heat HT,71.36,Heat HT,#DC143C,TWh
+DHN,Heat LT DHN,51.41,Heat LT,#FA8072,TWh
+DHN,Loss DHN,4.23,Heat LT,#FA8072,TWh
+DHN,DHN Sto,28.88,Heat LT,#FA8072,TWh
+DHN Sto,Heat LT DHN,26.97,Heat LT,#FA8072,TWh
+Heat HT,Ind Heat Demand,135.61,Heat HT,#DC143C,TWh
