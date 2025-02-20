@@ -701,22 +701,22 @@ subject to solar_area_limited :
 # As the goals are set to be equal to crit_min, the normalised goals are equal to zero
 
 subject to Cost_normalization :
-	TotalCost_norm = ((TotalCost - cost_min) / (cost_max - cost_min))*100000 ;
+	TotalCost_norm = ((TotalCost - cost_min) / (cost_max - cost_min));
 subject to GWP_normalization :
-	TotalGWP_norm = ((TotalGWP - gwp_min) / (gwp_max - gwp_min))*100000;
+	TotalGWP_norm = ((TotalGWP - gwp_min) / (gwp_max - gwp_min));
 
 # New objectives #
 subject to LCA_normalization :
-	TotalLCA_norm = ((TotalLCA - lca_min) / (lca_max - lca_min))*100000;
+	TotalLCA_norm = ((TotalLCA - lca_min) / (lca_max - lca_min));
 subject to Crit_1_normalization :
-	TotalCrit_1_norm = ((TotalCrit_1 - crit_1_min) / (crit_1_max - crit_1_min))*100000;
+	TotalCrit_1_norm = ((TotalCrit_1 - crit_1_min) / (crit_1_max - crit_1_min));
 subject to Crit_2_normalization :
-	TotalCrit_2_norm = ((TotalCrit_2 - crit_2_min) / (crit_2_max - crit_2_min))*100000;
+	TotalCrit_2_norm = ((TotalCrit_2 - crit_2_min) / (crit_2_max - crit_2_min));
 subject to Crit_3_normalization :
-	TotalCrit_3_norm = ((TotalCrit_3 - crit_3_min) / (crit_3_max - crit_3_min))*100000;
+	TotalCrit_3_norm = ((TotalCrit_3 - crit_3_min) / (crit_3_max - crit_3_min));
 
 subject to Cost_deviation_computation :
-	Positive_deviation_cost = TotalCost_norm - goal_cost_norm;
+	Positive_deviation_cost = (TotalCost_norm - goal_cost_norm);
 subject to GWP_deviation_computation :
 	Positive_deviation_gwp = TotalGWP_norm - goal_gwp_norm;
 
@@ -735,4 +735,4 @@ subject to Multi_crit_computation :
 	Multi_crit_obj = Positive_deviation_cost * weight_cost + weight_crit_1 * Positive_deviation_crit_1 + weight_crit_2 * Positive_deviation_crit_2 + weight_crit_3 * Positive_deviation_crit_3 + weight_lca * Positive_deviation_lca; # New objectives
 
 # Can choose between TotalGWP, TotalCost, TotalCrit_1, TotalCrit_2, TotalCrit_3, TotalLCA and Multi_crit_obj
-minimize obj: Multi_crit_obj;
+minimize obj: TotalCost;

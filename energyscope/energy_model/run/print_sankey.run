@@ -209,6 +209,25 @@ if sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in TYPICAL_DAY_OF_PERIOD[t]}(F_t
 #        (PathName & "/sankey/input2sankey.csv");
 #    }
 
+    # ADLIBIO_TO_HVC
+if sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in TYPICAL_DAY_OF_PERIOD[t]}(F_t ["ADLIBIO_TO_HVC", h, td]  ) > 10 then {
+    printf "%s,%s,%.2f,%s,%s,%s\n", "Wood" , "Adlibio. to HVC", sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in
+        TYPICAL_DAY_OF_PERIOD[t]}(-layers_in_out["ADLIBIO_TO_HVC","WOOD"] * F_t ["ADLIBIO_TO_HVC", h, td]  ) / 1000 , "Wood", "#CD853F", "TWh" >>
+        (PathName & "/sankey/input2sankey.csv");
+    printf "%s,%s,%.2f,%s,%s,%s\n", "H2" , "Adlibio. to HVC", sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in
+        TYPICAL_DAY_OF_PERIOD[t]}(-layers_in_out["ADLIBIO_TO_HVC","H2"] * F_t ["ADLIBIO_TO_HVC", h, td]  ) / 1000 , "H2", "#FF00FF", "TWh" >>
+        (PathName & "/sankey/input2sankey.csv");
+    printf "%s,%s,%.2f,%s,%s,%s\n", "Elec" , "Adlibio. to HVC", sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in
+        TYPICAL_DAY_OF_PERIOD[t]}(-layers_in_out["ADLIBIO_TO_HVC","ELECTRICITY"] * F_t ["ADLIBIO_TO_HVC", h, td]  ) / 1000 , "Electricity", "#00BFFF", "TWh" >>
+        (PathName & "/sankey/input2sankey.csv");
+    printf "%s,%s,%.2f,%s,%s,%s\n", "Heat HT" , "Adlibio. to HVC", sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in
+        TYPICAL_DAY_OF_PERIOD[t]}(layers_in_out["ADLIBIO_TO_HVC","HEAT_HIGH_T"] * F_t ["ADLIBIO_TO_HVC", h, td]  ) / 1000 ,
+        "Heat HT", "#DC143C", "TWh" >> (PathName & "/sankey/input2sankey.csv");
+    printf "%s,%s,%.2f,%s,%s,%s\n", "Adlibio. to HVC" , "HVC", sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in
+        TYPICAL_DAY_OF_PERIOD[t]}(layers_in_out["ADLIBIO_TO_HVC","HVC"] * F_t ["ADLIBIO_TO_HVC", h, td]  ) / 1000 , "HVC", "#00FFFF", "TWh" >>
+        (PathName & "/sankey/input2sankey.csv");
+    }
+
     # METHANOL_TO_HVC
 if sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in TYPICAL_DAY_OF_PERIOD[t]}(F_t ["METHANOL_TO_HVC", h, td]  ) > 10 then {
     printf "%s,%s,%.2f,%s,%s,%s\n", "Methanol" , "MTO", sum{t in PERIODS, h in HOUR_OF_PERIOD[t], td in

@@ -2,11 +2,14 @@ import datetime
 import os
 from pathlib import Path
 import energyscope as es
+from LCA_postprocess import LCA_postprocess_run
+from LCA_postprocess import plot_solo_spider
+import matplotlib.pyplot as plt
 import csv
 
 # MODIFY
 
-output_filename = r"C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/MC_outputs/MC_values.csv"
+output_filename = r"C:/Users/ghuysn/GIT_Projects/EnergyScope_LCA/case_studies/ARTICLE_PB-LCA/MC/MC_values.csv"
 
 # Output from 1st Algorithm
 input_weights = [
@@ -14,8 +17,7 @@ input_weights = [
     [0.0, 1.0, 0.0, 0.0, 0.0],
     [0.0, 0.0, 1.0, 0.0, 0.0],
     [0.0, 0.0, 0.0, 1.0, 0.0],
-    [0.0, 0.0, 0.0, 0.0, 1.0]
-]
+    [0.0, 0.0, 0.0, 0.0, 1.0]]
 
 # DO NOT MODIFY
 def modify_weights(config, input_weights, j):
@@ -33,7 +35,6 @@ def modify_weights(config, input_weights, j):
     else:
         raise KeyError("The key 'Weights' does not exist in the config file.")
     return config
-
 if __name__ == '__main__':
     analysis_only = False
     compute_TDs = True
@@ -43,6 +44,7 @@ if __name__ == '__main__':
 
     # loading the config file into a python dictionnary
     config = es.load_config(config_fn='config_ref_MC.yaml', project_path=project_path)
+    Path_output = str(config['cs_path'] / config['case_study'] / 'output')
     config['Working_directory'] = os.getcwd()  # keeping current working directory into config
     start_time = datetime.datetime.now()
 
@@ -58,6 +60,10 @@ if __name__ == '__main__':
             # Printing the .dat files for the optimisation problem
             es.print_data(config)
             es.run_es(config)
+            if config['LCA_postprocess']:
+                test = LCA_postprocess_run(Path_output)
+                plot_solo_spider(str(Path_output)+ '\PB_final.csv',8,k)
+                # Example to print the sankey from this script
             print(f"Line {k}")
 
         if config.get('save_MC_outputs', False):
@@ -83,4 +89,9 @@ if __name__ == '__main__':
     print(f"End time: {end_time}")
     duration = end_time - start_time
     print(f"Duration: {duration}")
+
+
+
+    # Optionally, you may want to close the figures to free up memory
+
 

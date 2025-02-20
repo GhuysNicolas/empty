@@ -9,7 +9,8 @@ import os
 from pathlib import Path
 import energyscope as es
 import matplotlib.pyplot as plt
-
+from LCA_postprocess import LCA_postprocess_run
+from LCA_postprocess import plot_solo_spider
 if __name__ == '__main__':
     analysis_only = False
     compute_TDs = True
@@ -19,8 +20,9 @@ if __name__ == '__main__':
 
     # loading the config file into a python dictionnary
     config = es.load_config(config_fn='config_ref.yaml', project_path=project_path)
+    Path_output = str(config['cs_path'] / config['case_study'] / 'output')
     config['Working_directory'] = os.getcwd() # keeping current working directory into config
-    
+
    # Reading the data of the csv
     es.import_data(config)
 
@@ -33,10 +35,9 @@ if __name__ == '__main__':
 
         # Running EnergyScope
         es.run_es(config)
-
-
-
-
+    if config['LCA_postprocess']:
+        test = LCA_postprocess_run(Path_output)
+        plot_PB = plot_solo_spider(str(Path_output) + '\PB_final.csv',1,1) #c=4.2 for GDP share
     # Example to print the sankey from this script
     if config['print_sankey']:
         sankey_path = config['cs_path']/ config['case_study'] / 'output' / 'sankey'
@@ -50,22 +51,24 @@ if __name__ == '__main__':
     # primary resources used
     if config['print_barh']:
         fig2, ax2 = es.plot_barh(outputs['resources_breakdown'][['Used']], title='Primary energy [GWh/y]')
-        fig3, ax3 = es.plot_barh(elec_assets[['f']], title='Electricity assets [GW_e]',x_label='Installed capacity [GW_e]')
-        # Set the paths where you want to save the figures
-        path_to_fig_1 = r"C:\Users\ghuysn\Documents\PhD\Seminar\Nouveau dossier\Figure_1.png"
-        path_to_fig_2 = r"C:\Users\ghuysn\Documents\PhD\Seminar\Nouveau dossier\Figure_2.png"
+        fig3, ax3 = es.plot_barh(elec_assets[['f']], title='Electricity assets [GW_e]',
+                                 x_label='Installed capacity [GW_e]')
+        path_to_fig_1 = str(Path_output + "\Cluster_1.png")
+        path_to_fig_2 = str(Path_output + "\Cluster_2.png")
+        print("clusters save")
         # Save the figures to the specified paths
         fig2.savefig(path_to_fig_1, dpi=300, bbox_inches='tight')
+        plt.close(fig2)  # Ensure the figure is closed after saving
         fig3.savefig(path_to_fig_2, dpi=300, bbox_inches='tight')
-
-        # Optionally, you may want to close the figures to free up memory
-        plt.close(fig2)
         plt.close(fig3)
 
     # layer_HEAT_LOW_T_DECEN for the 12 tds
     if config['print_hourly_data']:
         fig, ax = es.hourly_plot(plotdata=outputs['layer_HEAT_LOW_T_DECEN'], nbr_tds=12, show_plot=True)
+        plt.close(fig)
         elec_layer_plot = es.plot_layer_elec_td(outputs['layer_ELECTRICITY'])
+        plt.close(elec_layer_plot)
+
 
 
     
