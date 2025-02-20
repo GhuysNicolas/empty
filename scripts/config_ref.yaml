@@ -1,8 +1,8 @@
 # Case study definition
 # name of the case study. The problem formulation and ouptuts will be printed into the following relative path from main directory : case_studies/config['case_study']
-'case_study': 'ARTICLE_PB-LCA\Anne_CS_22_11\2050_check'
+'case_study': 'SA_FINAL_19-02-2025/2050'
 #'case_study': 'Anne_CS_22_11/SA_26_11_24/2025'
-'data_dir': 'Data\data_SA_FINAL_19-2-2025_2050\2050' # Folders containing the csv data files
+'data_dir': 'Data/SA_FINAL_19-02-2025/2050' # Folders containing the csv data files
 
 #'data_dir': 'Data/FEDECOM/CH_10'  # Folders containing the csv data files
 'LCA_max' : 14000; #2015 : 115000 / #2020 : 91000 / 2025 : 72000 / 2030 : 56000 / 2035 : 42000  / 2040 : 29000 / 2045 : 20000 / 2050 : 14000
